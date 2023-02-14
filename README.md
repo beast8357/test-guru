@@ -1,24 +1,5 @@
-# README
+Stack: Ruby version 3.0.0p0, Rails version 6.1.7.2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Conventions: Semantic Versioning 2.0.0 (https://semver.org/#semantic-versioning-200)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Entities: user, test, question, answer, result
