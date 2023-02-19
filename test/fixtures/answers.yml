@@ -2,8 +2,8 @@
 
 one:
   body: MyString
-  result: false
+  correct: false
 
 two:
   body: MyString
-  result: false
+  correct: false
