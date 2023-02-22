@@ -10,6 +10,7 @@ categories = Category.create(
   [
     { title: "Programming" },
     { title: "Music Mixing" },
+    { title: "Gaming" },
   ]
 )
 
@@ -35,6 +36,16 @@ tests = Test.create(
       level: 3,
       category_id: Category.find_by!(title: "Music Mixing").id
     },
+    {
+      title: "Deus Ex",
+      level: 2,
+      category_id: Category.find_by!(title: "Gaming").id
+    },
+    {
+      title: "Amnesia",
+      level: 3,
+      category_id: Category.find_by!(title: "Gaming").id
+    },
   ]
 )
 
@@ -45,7 +56,12 @@ questions = Question.create(
       test_id: Test.find_by!(title: "Ruby Basics").id
     },
     {
-      body: "Can you call private methods from other classes?",
+      body: "Do methods that return " \
+            " \'true\' or \'false\' have an exclamation mark at the end?",
+      test_id: Test.find_by!(title: "Ruby Basics").id
+    },
+    {
+      body: "Are classes objects?",
       test_id: Test.find_by!(title: "Ruby Basics").id
     },
     {
@@ -53,7 +69,11 @@ questions = Question.create(
       test_id: Test.find_by!(title: "Ruby Intermediate").id
     },
     {
-      body: "Is everything an object in Ruby?",
+      body: "Can you call private methods from other classes?",
+      test_id: Test.find_by!(title: "Ruby Intermediate").id
+    },
+    {
+      body: "Are \'private\' methods different from \'protected\' methods?",
       test_id: Test.find_by!(title: "Ruby Intermediate").id
     },
     {
@@ -65,6 +85,10 @@ questions = Question.create(
       test_id: Test.find_by!(title: "Mixing Basics").id
     },
     {
+      body: "To create an echo effect you need to use delay plugins",
+      test_id: Test.find_by!(title: "Mixing Basics").id
+    },
+    {
       body: "Parallel compression is when you put the audio " \
             "signal through several compressors on different channels",
       test_id: Test.find_by!(title: "Mixing Advanced").id
@@ -72,6 +96,36 @@ questions = Question.create(
     {
       body: "On the mix bus it\'s best to use an EQ in zero-latency mode",
       test_id: Test.find_by!(title: "Mixing Advanced").id
+    },
+    {
+      body: "You need to sidechain the kick drum " \
+            "to the bass to prevent low frequencies from overlapping",
+      test_id: Test.find_by!(title: "Mixing Advanced").id
+    },
+    {
+      body: "The latest game in the series is called \'Deus Ex: Mankind Divided\'",
+      test_id: Test.find_by!(title: "Deus Ex").id
+    },
+    {
+      body: "Adam Jensen found out that he had secret " \
+            "augmentations in Deus Ex: Human Revolution",
+      test_id: Test.find_by!(title: "Deus Ex").id
+    },
+    {
+      body: "The action in first game of the series takes place in year 2052",
+      test_id: Test.find_by!(title: "Deus Ex").id
+    },
+    {
+      body: "Alexander of Brennenburg is the main villain in Amnesia: The Dark Descent",
+      test_id: Test.find_by!(title: "Amnesia").id
+    },
+    {
+      body: "Oswald Mandus killed his own children in Amnesia: A Machine for Pigs",
+      test_id: Test.find_by!(title: "Amnesia").id
+    },
+    {
+      body: "Tasi Trianon in Amnesia: Rebirth can use weapons against monsters",
+      test_id: Test.find_by!(title: "Amnesia").id
     },
   ]
 )
