@@ -5,7 +5,9 @@ class Test < ApplicationRecord
 
   class << self
     def sort_by_category(name)
-      joins(:category).where("categories.title = ?", name).order(title: :DESC).pluck("tests.title")
+      joins(:category).where("categories.title = ?", name)
+                      .order(title: :desc)
+                      .pluck("tests.title")
     end
   end
 end
