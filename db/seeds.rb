@@ -19,32 +19,38 @@ tests = Test.create(
     {
       title: "Ruby Basics",
       level: 1,
-      category_id: Category.find_by_title("Programming").id
+      category_id: Category.find_by_title("Programming").id,
+      creator_id: User.first
     },
     {
       title: "Ruby Intermediate",
       level: 2,
-      category_id: Category.find_by_title("Programming").id
+      category_id: Category.find_by_title("Programming").id,
+      creator_id: User.first
     },
     {
       title: "Mixing Basics",
       level: 1,
-      category_id: Category.find_by_title("Music Mixing").id
+      category_id: Category.find_by_title("Music Mixing").id,
+      creator_id: User.first
     },
     {
       title: "Mixing Advanced",
       level: 3,
-      category_id: Category.find_by_title("Music Mixing").id
+      category_id: Category.find_by_title("Music Mixing").id,
+      creator_id: User.first
     },
     {
       title: "Deus Ex",
       level: 2,
-      category_id: Category.find_by_title("Gaming").id
+      category_id: Category.find_by_title("Gaming").id,
+      creator_id: User.first
     },
     {
       title: "Amnesia",
       level: 3,
-      category_id: Category.find_by_title("Gaming").id
+      category_id: Category.find_by_title("Gaming").id,
+      creator_id: User.first
     },
   ]
 )
