@@ -1,7 +1,9 @@
 class Test < ApplicationRecord
   belongs_to :category
-  has_many :user_tests
-  has_many :users, through: :user_tests
+  belongs_to :creator, class_name: "User", foreign_key: "creator_id"
+  has_many :questions
+  has_many :users_tests
+  has_many :users, through: :users_tests
 
   class << self
     def sort_by_category(name)
