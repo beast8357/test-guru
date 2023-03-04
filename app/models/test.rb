@@ -5,11 +5,9 @@ class Test < ApplicationRecord
   has_many :users_tests
   has_many :users, through: :users_tests
 
-  class << self
-    def sort_by_category(name)
-      joins(:category).where("categories.title = ?", name)
-                      .order(title: :desc)
-                      .pluck("tests.title")
-    end
-  end
+  scope :by_category, -> (name) { joins(:category).where("categories.title = ?", name) }
+  scope :by_level, -> (level) { where(level: level) }
+  scope :easy, -> { by_level(0..1) }
+  scope :medium, -> { by_level(2..4) }
+  scope :hard, -> { by_level(5..Float::INFINITY) }
 end
