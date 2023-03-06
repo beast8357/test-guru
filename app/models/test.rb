@@ -5,6 +5,9 @@ class Test < ApplicationRecord
   has_many :users_tests
   has_many :users, through: :users_tests
 
+  validates :title, presence: true, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   scope :by_category, -> (name) { joins(:category).where("categories.title = ?", name) }
   scope :by_level, -> (level) { where(level: level) }
   scope :easy, -> { by_level(0..1) }
