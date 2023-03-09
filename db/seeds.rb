@@ -63,7 +63,7 @@ questions = Question.create(
     },
     {
       body: "Do methods that return " \
-            " \'true\' or \'false\' have an exclamation mark at the end?",
+            "\'true\' or \'false\' have an exclamation mark at the end?",
       test_id: Test.find_by_title("Ruby Basics").id,
     },
     {
