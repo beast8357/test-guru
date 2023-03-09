@@ -118,7 +118,7 @@ questions = Question.create(
       test_id: Test.find_by_title("Deus Ex").id,
     },
     {
-      body: "The action in first game of the series takes place in year 2052",
+      body: "The action in the first game of the series takes place in year 2052",
       test_id: Test.find_by_title("Deus Ex").id,
     },
     {
