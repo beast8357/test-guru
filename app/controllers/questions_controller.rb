@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, only: %i[index, show]
+  before_action :find_test, only: %i[index show]
   before_action :find_question, only: %i[show]
 
   def index
