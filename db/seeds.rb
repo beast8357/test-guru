@@ -63,7 +63,7 @@ questions = Question.create(
     },
     {
       body: "Do methods that return " \
-            " \'true\' or \'false\' have an exclamation mark at the end?",
+            "\'true\' or \'false\' have an exclamation mark at the end?",
       test_id: Test.find_by_title("Ruby Basics").id,
     },
     {
@@ -83,54 +83,53 @@ questions = Question.create(
       test_id: Test.find_by_title("Ruby Intermediate").id,
     },
     {
-      body: "First you do mixing and only then mastering",
+      body: "When mixing a song is volume balancing in the first place?",
       test_id: Test.find_by_title("Mixing Basics").id,
     },
     {
-      body: "Equalizers are used to compress the audio signal",
+      body: "Are equalizers used to compress the audio signal",
       test_id: Test.find_by_title("Mixing Basics").id,
     },
     {
-      body: "To create an echo effect you need to use delay plugins",
+      body: "Should you use chorus to create an echo effect?",
       test_id: Test.find_by_title("Mixing Basics").id,
     },
     {
-      body: "Parallel compression is when you put the audio " \
-            "signal through several compressors on different channels",
+      body: "Is parallel compression used when mixing vocals?",
       test_id: Test.find_by_title("Mixing Advanced").id,
     },
     {
-      body: "On the mix bus it\'s best to use an EQ in zero-latency mode",
+      body: "Is it OK to use an EQ in zero-latency mode on the mix bus?",
       test_id: Test.find_by_title("Mixing Advanced").id,
     },
     {
-      body: "You need to sidechain the kick drum " \
-            "to the bass to prevent low frequencies from overlapping",
+      body: "Do you need to sidechain the kick drum " \
+            "to the bass to prevent low frequencies from overlapping?",
       test_id: Test.find_by_title("Mixing Advanced").id,
     },
     {
-      body: "The latest game in the series is called \'Deus Ex: Mankind Divided\'",
+      body: "Is the latest game in the series called \'Deus Ex: Mankind Divided\'?",
       test_id: Test.find_by_title("Deus Ex").id,
     },
     {
-      body: "Adam Jensen found out that he had secret " \
-            "augmentations in Deus Ex: Human Revolution",
+      body: "Did Adam Jensen find out that he'd had secret " \
+            "augmentations in Deus Ex: Human Revolution?",
       test_id: Test.find_by_title("Deus Ex").id,
     },
     {
-      body: "The action in first game of the series takes place in year 2052",
+      body: "Does the action in the first game of the series take place in year 2052?",
       test_id: Test.find_by_title("Deus Ex").id,
     },
     {
-      body: "Alexander of Brennenburg is the main villain in Amnesia: The Dark Descent",
+      body: "Is Alexander of Brennenburg the main villain in Amnesia: The Dark Descent?",
       test_id: Test.find_by_title("Amnesia").id,
     },
     {
-      body: "Oswald Mandus killed his own children in Amnesia: A Machine for Pigs",
+      body: "Did Oswald Mandus kill his own children in Amnesia: A Machine for Pigs?",
       test_id: Test.find_by_title("Amnesia").id,
     },
     {
-      body: "Tasi Trianon in Amnesia: Rebirth can use weapons against monsters",
+      body: "Can Tasi Trianon use weapons against monsters in Amnesia: Rebirth?",
       test_id: Test.find_by_title("Amnesia").id,
     },
   ]
