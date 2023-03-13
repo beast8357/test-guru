@@ -1,15 +1,24 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_test, only: %i[index show]
-  before_action :find_question, only: %i[show]
+  before_action :find_test, only: %i[index show create destroy]
+  before_action :find_question, only: %i[show destroy]
 
   def index
     test_questions = @test.questions.pluck(:body)
+
     render plain: "Test#{@test.id} questions:\n#{test_questions.join("\n")}"
   end
 
-  def show
-    render plain: "Question body:\n#{@question.body}"
+  def create
+    @test.questions.create(question_params)
+
+    redirect_to test_questions_path(@test)
+  end
+
+  def destroy
+    @question.destroy
+
+    redirect_to test_questions_path(@test)
   end
 
   private
@@ -20,6 +29,10 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = @test.questions.find(params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:body)
   end
 
 end
