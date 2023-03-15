@@ -1,4 +1,4 @@
-<p>Question: <%= @question.body %> </p>
+<p>Question: <%= @question.body %></p>
 
 <form action="/tests/<%= params[:test_id] %>/questions/<%= params[:id] %>" method="post" onSubmit="return confirm('Are you sure you want to delete this question?');">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
