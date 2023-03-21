@@ -7,7 +7,7 @@ class TestsController < ApplicationController
   end
 
   def show
-    
+    @test_questions = @test.questions.pluck(:body)
   end
 
   private

@@ -1,0 +1,4 @@
+<strong>Questions:</strong>
+<% @test_questions.each.with_index(1) do |question_body, index| %>
+	<p><%= "#{index}. #{question_body}" %></p>
+<% end %>
