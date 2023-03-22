@@ -8,8 +8,11 @@
 		<tr>
 			<td><%= "#{index}. #{body}" %></td>
 			<td>
+				<%= link_to 'Edit',
+										edit_test_question_path(@test,
+																						@test.questions.find_by_body(body)) %> |
 				<%= render partial: 'shared/test_question_deleter',
-									 locals: { test: @test, question: Question.find_by_body(body) } %>
+									 locals: { test: @test, question: @test.questions.find_by_body(body) } %>
 			</td>
 		</tr>
 	<% end %>
