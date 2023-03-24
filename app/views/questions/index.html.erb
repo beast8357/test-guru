@@ -1,4 +1,2 @@
-<strong>Test<%= @test.id %> questions:</strong>
-<% @test_questions.each.with_index(1) do |question_body, index| %>
-	<p><%= "#{index}. #{question_body}" %></p>
-<% end %>
+<%= render 'shared/test_questions' %>
+<%= render 'shared/footer' %>
