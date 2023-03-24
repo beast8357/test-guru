@@ -9,8 +9,7 @@ module ApplicationHelper
   end
 
   def school_url
-    link_to "Учебный проект в онлайн-школе Thinknetica",
-            "https://thinknetica.com/",
+    link_to "Учебный проект в онлайн-школе Thinknetica", "https://thinknetica.com/",
             target: :blank
   end
 
