@@ -5,11 +5,13 @@
   </p>
 
   <p>
-    <%= render partial: 'shared/test_question_deleter',
+    <%= link_to 'Edit', edit_test_question_path(@test, @question) %> |
+    <%= render partial: 'question_deleter',
                locals: { test: @test, question: @question } %>
   </p>
 <% end %>
 
+<%= link_to 'To Tests', tests_path %> |
 <%= link_to 'Back', @test %>
 
 <%= render 'shared/footer' %>

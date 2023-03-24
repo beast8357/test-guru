@@ -7,11 +7,9 @@
 	<% @test_questions.each.with_index(1) do |body, index| %>
 		<tr>
 			<td><%= "#{index}. #{body}" %></td>
-			<td>
-				<%= link_to 'Edit',
-										edit_test_question_path(@test,
-																						@test.questions.find_by_body(body)) %> |
-				<%= render partial: 'shared/test_question_deleter',
+			<td><%= link_to 'View', test_question_path(@test, @test.questions.find_by_body(body)) %> |
+				<%= link_to 'Edit', edit_test_question_path(@test, @test.questions.find_by_body(body)) %> |
+				<%= render partial: 'questions/question_deleter',
 									 locals: { test: @test, question: @test.questions.find_by_body(body) } %>
 			</td>
 		</tr>
@@ -20,5 +18,5 @@
 
 <p>
 	<%= link_to 'New question', new_test_question_path(@test) %> |
-	<%= link_to 'Back', tests_path(@test) %>
+	<%= link_to 'Back', tests_path %>
 </p>
