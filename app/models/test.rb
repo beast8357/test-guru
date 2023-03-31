@@ -10,6 +10,7 @@ class Test < ApplicationRecord
 
   scope :by_category, -> (name) { joins(:category).where("categories.title = ?", name) }
   scope :by_level, -> (level) { where(level: level) }
+  scope :level_unknown, -> { by_level(0) }
   scope :easy, -> { by_level(1) }
   scope :medium, -> { by_level(2) }
   scope :hard, -> { by_level(3) }
