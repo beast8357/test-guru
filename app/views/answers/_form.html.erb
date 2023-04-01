@@ -1,15 +1,5 @@
-<%= form_with(model: answer) do |form| %>
-  <% if answer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
-
-      <ul>
-        <% answer.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with model: [@test, @question, @answer], local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
 
   <div class="actions">
     <%= form.submit %>

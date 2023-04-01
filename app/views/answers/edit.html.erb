@@ -1,6 +1,9 @@
 <h1>Editing Answer</h1>
 
-<%= render 'form', answer: @answer %>
+<p>
+	<%= @answer.question.body %>
+</p>
 
-<%= link_to 'Show', @answer %> |
-<%= link_to 'Back', answers_path %>
+<%= render 'form' %>
+<%= render 'shared/to_tests' %> |
+<%= link_to 'Back', test_question_path(@test, @question) %>

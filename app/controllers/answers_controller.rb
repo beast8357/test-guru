@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
 
-  before_action :find_question, only: %i[ new create ]
+  before_action :find_test, only: %i[ show new edit create update destroy ]
+  before_action :find_question, only: %i[ show new edit create update destroy ]
   before_action :set_answer, only: %i[ show edit update destroy ]
 
   def show
@@ -41,12 +42,16 @@ class AnswersController < ApplicationController
 
   private
 
+    def find_test
+      @test = Test.find(params[:test_id])
+    end
+
     def find_question
-      @question = Question.find(params[:question_id])
+      @question = @test.questions.find(params[:question_id])
     end
 
     def set_answer
-      @answer = Answer.find(params[:id])
+      @answer = @question.answers.find(params[:id])
     end
 
     def answer_params
