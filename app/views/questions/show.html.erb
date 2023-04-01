@@ -1,6 +1,9 @@
 <%= form_with model: [@test, @question], local: true do |form| %>
+  <h1>
+    <%= "\'#{@test.title}\' question" %>
+  </h1>
+
   <p>
-    <%= form.label :question %>:
     <%= @question.body %>
   </p>
 
@@ -8,6 +11,16 @@
     <%= link_to 'Edit', edit_test_question_path(@test, @question) %> |
     <%= render partial: 'shared/question_deleter',
                locals: { test: @test, question: @question } %>
+  </p>
+
+  <h2>Answers</h2>
+
+  <ol>
+    <%= render @question.answers %>
+  </ol>
+
+  <p>
+    <%= link_to 'New answer', new_test_question_answer_path(@test, @question) %>
   </p>
 <% end %>
 
