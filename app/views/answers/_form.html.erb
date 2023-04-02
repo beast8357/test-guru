@@ -15,3 +15,7 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+<%= render 'shared/to_tests' %> |
+<%= link_to 'Back', test_question_path(@test, @question) %>
+<%= render 'shared/footer' %>
