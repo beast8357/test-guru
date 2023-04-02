@@ -1,7 +1,17 @@
-<h1>Answer</h1>
+<h1>Question</h1>
 
 <p>
+	<%= @answer.question.body %>
+</p>
+
+<p>
+	<b>Answer:</b>
 	<%= @answer.body %>
+</p>
+
+<p>
+	<b>Correct:</b>
+	<%= @answer.correct %>
 </p>
 
 <%= render 'shared/to_tests' %> |
