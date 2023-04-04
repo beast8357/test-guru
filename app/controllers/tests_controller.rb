@@ -11,6 +11,10 @@ class TestsController < ApplicationController
     @test_questions = @test.questions.pluck(:body)
   end
 
+  def edit
+    
+  end
+
   def start
     @user.tests.push(@test)
 
