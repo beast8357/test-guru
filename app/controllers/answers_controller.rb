@@ -1,8 +1,8 @@
 class AnswersController < ApplicationController
 
-  before_action :find_test, only: %i[ show new edit create update destroy ]
-  before_action :find_question, only: %i[ show new edit create update destroy ]
-  before_action :set_answer, only: %i[ show edit update destroy ]
+  before_action :find_test, only: %i[show new edit create update destroy]
+  before_action :find_question, only: %i[show new edit create update destroy]
+  before_action :set_answer, only: %i[show edit update destroy]
 
   def show
 

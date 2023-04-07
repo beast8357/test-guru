@@ -16,4 +16,5 @@ class Answer < ApplicationRecord
     errors.add(:question, "cannot contain more than 4 answers") if
     question.answers.count >= MAX_ANSWERS_COUNT
   end
+  
 end
