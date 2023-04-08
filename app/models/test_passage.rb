@@ -17,6 +17,10 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def correct_answers_percentage
+    (correct_questions.to_f * 100 / test.questions.count).to_i
+  end
+
   def completed?
     current_question.nil?
   end
@@ -50,10 +54,6 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
-  end
-
-  def correct_answers_percentage
-    (correct_questions.to_f * 100 / test.questions.count).to_i
   end
 
 end
