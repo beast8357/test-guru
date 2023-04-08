@@ -4,5 +4,9 @@ class Question < ApplicationRecord
   has_many :answers
 
   validates :body, presence: true
-  
+
+  def number
+    test.questions.ids.index(id) + 1
+  end
+
 end
