@@ -1,11 +1,21 @@
 class TestPassage < ApplicationRecord
 
+  THRESHOLD = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: "Question", optional: true
 
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_set_next_question
+
+  def successful?
+    if correct_answers_percentage >= THRESHOLD
+      true
+    else
+      false
+    end
+  end
 
   def completed?
     current_question.nil?
@@ -40,6 +50,10 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def correct_answers_percentage
+    (correct_questions.to_f * 100 / test.questions.count).to_i
   end
 
 end

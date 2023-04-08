@@ -1,3 +1,7 @@
-<h1>The <%= "\'#{@test_passage.test.title}\'" %> test has been successfully completed!</h1>
+<h1><%= result_header(@test_passage) %></h1>
+
+<p>
+	Correct answers: <%= @test_passage.correct_questions %>
+</p>
 
 <%= render 'shared/to_tests' %>
