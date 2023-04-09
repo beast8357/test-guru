@@ -1,7 +1,7 @@
-<h1><%= result_header(@test_passage) %></h1>
+<h1><%= results_header(@test_passage) %></h1>
 
-<p>
-	Correct answers: <%= @test_passage.correct_questions %>
-</p>
+<b>
+	<%= test_results(@test_passage) %>
+</b>
 
 <%= render 'shared/to_tests' %>
