@@ -10,9 +10,19 @@ module TestPassagesHelper
 
   def test_results(test_passage)
     if test_passage.successful?
-      "<p>Your result: <span class='success'>#{test_passage.correct_answers_percentage}%</span></p>".html_safe
+      "<p>
+         Your result: 
+         <span class='success'>
+           #{test_passage.correct_answers_percentage}%
+         </span>
+       </p>".html_safe
     else
-      "<p>Your result: <span class='failure'>#{test_passage.correct_answers_percentage}%</span></p>".html_safe
+      "<p>
+         Your result: 
+         <span class='failure'>
+           #{test_passage.correct_answers_percentage}%
+         </span>
+       </p>".html_safe
     end
   end
 
