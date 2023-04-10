@@ -42,13 +42,13 @@ tests = Test.create(
     },
     {
       title: "Deus Ex",
-      level: 2,
+      level: 3,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.first.id,
     },
     {
       title: "Amnesia",
-      level: 3,
+      level: 2,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.first.id,
     },
@@ -71,7 +71,7 @@ questions = Question.create(
       test_id: Test.find_by_title("Ruby Basics").id,
     },
     {
-      body: "Do \'proc\' and \'lambda\' act the same way?",
+      body: "Are there any differences between \'proc\' and \'lambda\'?",
       test_id: Test.find_by_title("Ruby Intermediate").id,
     },
     {
@@ -135,7 +135,15 @@ questions = Question.create(
   ]
 )
 
-questions.each do |question|
-  Answer.create(body: "Yes", correct: true, question_id: question.id)
-  Answer.create(body: "No", correct: false, question_id: question.id)
+question_ids_one = [1, 3, 4, 6, 7, 10, 12, 13, 15, 16, 17]
+question_ids_two = [2, 5, 8, 9, 11, 14, 18]
+
+question_ids_one.each do |id|
+  Answer.create(body: "Yes", correct: true, question_id: id)
+  Answer.create(body: "No", correct: false, question_id: id)
+end
+
+question_ids_two.each do |id|
+  Answer.create(body: "Yes", correct: false, question_id: id)
+  Answer.create(body: "No", correct: true, question_id: id)
 end

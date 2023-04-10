@@ -4,14 +4,14 @@
   <%= render 'shared/errors', resource: @question %>
 
   <p>
-    <%= form.label :question %>:<br>
     <%= form.text_field :body %>
   </p>
 
-  <p><%= form.submit %></p>
+  <p>
+    <%= form.submit %>
+  </p>
 <% end %>
 
 <%= render 'shared/to_tests' %> |
 <%= render 'back' %>
-
 <%= render 'shared/footer' %>
