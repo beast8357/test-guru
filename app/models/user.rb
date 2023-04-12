@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: "Test", foreign_key: "creator_id"
 
+  validates :name, presence: true
   validates :email, presence: true
   validates :password, presence: true, if: proc { |u| u.password_digest.blank? }
   validates :password, confirmation: true
