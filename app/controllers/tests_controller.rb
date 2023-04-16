@@ -1,5 +1,6 @@
 class TestsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_test, only: %i[start show]
   before_action :set_user, only: :start
 
