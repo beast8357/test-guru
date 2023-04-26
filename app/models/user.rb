@@ -6,9 +6,10 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
-  validates :password_confirmation, presence: true
 
   has_secure_password
+
+  validates :password_confirmation, presence: true
 
   def completed_tests_by_level(level)
     tests.by_level(level)
