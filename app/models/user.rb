@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: "Test", foreign_key: "creator_id"
 
   validates :name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password_confirmation, presence: true
 
   has_secure_password
