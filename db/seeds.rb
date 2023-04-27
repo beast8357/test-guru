@@ -1,8 +1,8 @@
 users = User.create(
   [
-    { name: "Alex", email: "alex228@jail.com" },
-    { name: "Zelda", email: "deffka@jail.com" },
-    { name: "Sam", email: "serious@jail.com" },
+    { name: "Alex", email: "alex228@jail.com", password_digest: "qwe" },
+    { name: "Zelda", email: "deffka@jail.com", password_digest: "qwe" },
+    { name: "Sam", email: "serious@jail.com", password_digest: "qwe" },
   ]
 )
 
