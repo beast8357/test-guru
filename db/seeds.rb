@@ -1,8 +1,8 @@
 users = User.create(
   [
-    { name: "Alex", email: "alex228@jail.com", password_digest: "qwe" },
-    { name: "Zelda", email: "deffka@jail.com", password_digest: "qwe" },
-    { name: "Sam", email: "serious@jail.com", password_digest: "qwe" },
+    { email: "alex228@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
+    { email: "deffka@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
+    { email: "serious@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
   ]
 )
 
@@ -20,37 +20,37 @@ tests = Test.create(
       title: "Ruby Basics",
       level: 1,
       category_id: Category.find_by_title("Programming").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
     {
       title: "Ruby Intermediate",
       level: 2,
       category_id: Category.find_by_title("Programming").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
     {
       title: "Mixing Basics",
       level: 1,
       category_id: Category.find_by_title("Music Mixing").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
     {
       title: "Mixing Advanced",
       level: 3,
       category_id: Category.find_by_title("Music Mixing").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
     {
       title: "Deus Ex",
       level: 3,
       category_id: Category.find_by_title("Gaming").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
     {
       title: "Amnesia",
       level: 2,
       category_id: Category.find_by_title("Gaming").id,
-      creator_id: User.first.id,
+      creator_id: User.first.id
     },
   ]
 )
