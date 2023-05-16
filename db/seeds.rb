@@ -1,8 +1,8 @@
 users = User.create(
   [
-    { email: "alex228@gmail.com", password_digest: "qwe", password_confirmation: "qwe" },
-    { email: "deffka@gmail.com", password_digest: "qwe", password_confirmation: "qwe" },
-    { email: "serious@gmail.com", password_digest: "qwe", password_confirmation: "qwe" },
+    { email: "alex228@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
+    { email: "deffka@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
+    { email: "serious@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
   ]
 )
 

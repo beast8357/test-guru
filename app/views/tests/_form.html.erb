@@ -1,0 +1,23 @@
+<%= form_with model: @test, local: true do |form| %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title, required: true, placeholder: "Enter the title" %>
+  </div>
+
+  <div>
+    <%= form.label :level %><br>
+    <%= form.number_field :level, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </div>
+
+  <p>
+    <%= form.submit "Submit" %>
+  </p>
+
+  <%= link_to 'Back', tests_path %>
+<% end %>

@@ -4,9 +4,11 @@
   <tr>
     <th>Title</th>
     <th>Level</th>
-    <th>Number of questions</th>
+    <th>Questions</th>
     <th colspan="4">Actions</th>
   </tr>
 
   <%= render @tests %>
 </table>
+
+<%= link_to 'Create new test', new_test_path %>
