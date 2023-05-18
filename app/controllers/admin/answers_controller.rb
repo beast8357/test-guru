@@ -1,56 +1,57 @@
-class Admin::AnswersController < Admin::BaseController
-  
-  helper_method :current_test, :current_question
+class Admin::AnswersController < ApplicationController
+
+  before_action :find_test, only: %i[show new edit create update destroy]
+  before_action :find_question, only: %i[show new edit create update destroy]
+  before_action :set_answer, only: %i[show edit update destroy]
 
   def show
-    @answer = find_answer
+
   end
 
   def new
-    @answer = current_question.answers.new
+    @answer = @question.answers.new
   end
 
   def edit
-    @answer = find_answer
-  end
 
+  end
+  
   def create
-    @answer = current_question.answers.build(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
-      redirect_to admin_test_question_path(current_test, current_question)
+      redirect_to test_question_path(@test, @answer.question)
     else
       render :new
     end
   end
 
   def update
-    @answer = find_answer
-
     if @answer.update(answer_params)
-      redirect_to admin_test_question_path(current_test, current_question)
+      redirect_to test_question_path(@test, @answer.question)
     else
-      :edit
+      render :new
     end
   end
 
   def destroy
-    find_answer.destroy
-    redirect_to admin_test_question_path(current_test, current_question)
+    @answer.destroy
+
+    redirect_to test_question_path(@test, @answer.question)
   end
 
   private
 
-  def current_test
-    @current_test ||= Test.find(params[:test_id])
+  def find_test
+    @test = Test.find(params[:test_id])
   end
 
-  def current_question
-    @current_question ||= current_test.questions.find(params[:question_id])
+  def find_question
+    @question = @test.questions.find(params[:question_id])
   end
 
-  def find_answer
-    current_question.answers.find(params[:id])
+  def set_answer
+    @answer = @question.answers.find(params[:id])
   end
 
   def answer_params

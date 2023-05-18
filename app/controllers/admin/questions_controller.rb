@@ -1,52 +1,58 @@
-class Admin::QuestionsController < Admin::BaseController
+class Admin::QuestionsController < ApplicationController
 
-  helper_method :current_test
+  before_action :find_test, only: %i[index show new edit create update destroy]
+  before_action :find_question, only: %i[show edit update destroy]
+
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+
+  def index
+    @test_questions = @test.questions.pluck(:body)
+  end
 
   def show
-    @question = find_question
+    
   end
 
   def new
-    @question = current_test.questions.new
+    @question = @test.questions.new
+  end
+
+  def edit
+    
   end
 
   def create
-    @question = current_test.questions.build(question_params)
+    @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to admin_test_path(current_test)
+      redirect_to @test
     else
       render :new
     end
   end
 
-  def edit
-    @question = find_question
-  end
-
   def update
-    @question = find_question
-
     if @question.update(question_params)
-      redirect_to admin_test_path(current_test)
+      redirect_to @test
     else
       render :edit
     end
   end
 
   def destroy
-    find_question.destroy
-    redirect_to admin_test_path(current_test)
+    @question.destroy
+
+    redirect_to @test
   end
 
   private
 
-  def current_test
-    @current_test ||= Test.find(params[:test_id])
+  def find_test
+    @test = Test.find(params[:test_id])
   end
 
   def find_question
-    current_test.questions.find(params[:id])
+    @question = @test.questions.find(params[:id])
   end
 
   def question_params
@@ -54,7 +60,7 @@ class Admin::QuestionsController < Admin::BaseController
   end
 
   def rescue_with_question_not_found
-    render plain: "The question was not found"
+    render plain: "Question not found"
   end
-  
+
 end
