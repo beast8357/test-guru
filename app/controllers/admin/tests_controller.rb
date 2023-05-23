@@ -8,7 +8,7 @@ class Admin::TestsController < ApplicationController
   end
 
   def show
-    @test_questions = @test.questions.pluck(:body)
+
   end
 
   def new
@@ -24,7 +24,7 @@ class Admin::TestsController < ApplicationController
 
     if @test.save
       flash[:notice] = "New #{@test.title} test has been successfully created."
-      redirect_to tests_path
+      redirect_to admin_tests_path
     else
       render :new
     end
@@ -32,7 +32,7 @@ class Admin::TestsController < ApplicationController
 
   def update
     if @test.update(test_params)
-      redirect_to tests_path
+      redirect_to admin_tests_path
     else
       render :new
     end
@@ -42,7 +42,7 @@ class Admin::TestsController < ApplicationController
     @test.destroy
 
     flash[:notice] = "The #{@test.title} test has been successfully deleted."
-    redirect_to tests_path
+    redirect_to admin_tests_path
   end
 
   def start

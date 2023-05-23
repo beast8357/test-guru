@@ -14,5 +14,5 @@
   <%= @answer.correct %>
 </p>
 
-<%= link_to 'To Tests', tests_path %> |
-<%= link_to 'Back', test_question_path(@test, @question) %>
+<%= link_to 'To Tests', admin_tests_path %> |
+<%= link_to 'Back', admin_test_question_path(current_test, current_question) %>

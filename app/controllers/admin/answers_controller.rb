@@ -1,7 +1,7 @@
 class Admin::AnswersController < ApplicationController
 
-  before_action :find_test, only: %i[show new edit create update destroy]
-  before_action :find_question, only: %i[show new edit create update destroy]
+  helper_method :current_test, :current_question
+
   before_action :set_answer, only: %i[show edit update destroy]
 
   def show
@@ -9,7 +9,7 @@ class Admin::AnswersController < ApplicationController
   end
 
   def new
-    @answer = @question.answers.new
+    @answer = current_question.answers.new
   end
 
   def edit
@@ -17,10 +17,10 @@ class Admin::AnswersController < ApplicationController
   end
   
   def create
-    @answer = @question.answers.new(answer_params)
+    @answer = current_question.answers.new(answer_params)
 
     if @answer.save
-      redirect_to test_question_path(@test, @answer.question)
+      redirect_to admin_test_question_path(current_test, current_question)
     else
       render :new
     end
@@ -28,7 +28,7 @@ class Admin::AnswersController < ApplicationController
 
   def update
     if @answer.update(answer_params)
-      redirect_to test_question_path(@test, @answer.question)
+      redirect_to admin_test_question_path(current_test, current_question)
     else
       render :new
     end
@@ -37,21 +37,21 @@ class Admin::AnswersController < ApplicationController
   def destroy
     @answer.destroy
 
-    redirect_to test_question_path(@test, @answer.question)
+    redirect_to admin_test_question_path(current_test, current_question)
   end
 
   private
 
-  def find_test
-    @test = Test.find(params[:test_id])
+  def current_test
+    @current_test ||= Test.find(params[:test_id])
   end
 
-  def find_question
-    @question = @test.questions.find(params[:question_id])
+  def current_question
+    @current_question ||= current_test.questions.find(params[:question_id])
   end
 
   def set_answer
-    @answer = @question.answers.find(params[:id])
+    @answer = current_question.answers.find(params[:id])
   end
 
   def answer_params

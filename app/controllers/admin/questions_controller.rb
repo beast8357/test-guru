@@ -1,20 +1,15 @@
 class Admin::QuestionsController < ApplicationController
 
-  before_action :find_test, only: %i[index show new edit create update destroy]
+  helper_method :current_test
+
   before_action :find_question, only: %i[show edit update destroy]
-
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    @test_questions = @test.questions.pluck(:body)
-  end
 
   def show
     
   end
 
   def new
-    @question = @test.questions.new
+    @question = current_test.questions.new
   end
 
   def edit
@@ -22,10 +17,10 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def create
-    @question = @test.questions.new(question_params)
+    @question = current_test.questions.new(question_params)
 
     if @question.save
-      redirect_to @test
+      redirect_to admin_test_path(current_test)
     else
       render :new
     end
@@ -33,7 +28,7 @@ class Admin::QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @test
+      redirect_to admin_test_path(current_test)
     else
       render :edit
     end
@@ -42,25 +37,21 @@ class Admin::QuestionsController < ApplicationController
   def destroy
     @question.destroy
 
-    redirect_to @test
+    redirect_to admin_test_path(current_test)
   end
 
   private
 
-  def find_test
-    @test = Test.find(params[:test_id])
+  def current_test
+    @current_test ||= Test.find(params[:test_id])
   end
 
   def find_question
-    @question = @test.questions.find(params[:id])
+    @question = current_test.questions.find(params[:id])
   end
 
   def question_params
     params.require(:question).permit(:body)
-  end
-
-  def rescue_with_question_not_found
-    render plain: "Question not found"
   end
 
 end
