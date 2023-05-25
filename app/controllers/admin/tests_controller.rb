@@ -1,4 +1,4 @@
-class Admin::TestsController < ApplicationController
+class Admin::TestsController < Admin::BaseController
 
   before_action :set_test, only: %i[start show edit update destroy]
   before_action :test_params, only: %i[create update]

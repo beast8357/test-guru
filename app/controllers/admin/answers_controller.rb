@@ -1,4 +1,4 @@
-class Admin::AnswersController < ApplicationController
+class Admin::AnswersController < Admin::BaseController
 
   helper_method :current_test, :current_question
 
