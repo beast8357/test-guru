@@ -1,8 +1,17 @@
 users = User.create(
   [
-    { email: "alex228@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
-    { email: "deffka@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
-    { email: "serious@gmail.com", password: "qweqwe", password_confirmation: "qweqwe" },
+    { type: "Admin",
+      first_name: "Bulat",
+      last_name: "Khairutdinov",
+      email: "god@admin.com",
+      password: "qweasd",
+      password_confirmation: "qweasd",
+    },
+    { first_name: "Regular",
+      last_name: "User",
+      email: "user@gmail.com",
+      password: "qweqwe",
+      password_confirmation: "qweqwe" },
   ]
 )
 
@@ -20,37 +29,37 @@ tests = Test.create(
       title: "Ruby Basics",
       level: 1,
       category_id: Category.find_by_title("Programming").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
     {
       title: "Ruby Intermediate",
       level: 2,
       category_id: Category.find_by_title("Programming").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
     {
       title: "Mixing Basics",
       level: 1,
       category_id: Category.find_by_title("Music Mixing").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
     {
       title: "Mixing Advanced",
       level: 3,
       category_id: Category.find_by_title("Music Mixing").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
     {
       title: "Deus Ex",
       level: 3,
       category_id: Category.find_by_title("Gaming").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
     {
       title: "Amnesia",
       level: 2,
       category_id: Category.find_by_title("Gaming").id,
-      creator_id: User.first.id,
+      creator_id: User.find_by_email("god@admin.com").id,
     },
   ]
 )
