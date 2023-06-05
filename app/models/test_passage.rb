@@ -1,6 +1,6 @@
 class TestPassage < ApplicationRecord
 
-  THRESHOLD = 85
+  THRESHOLD = 85.freeze
 
   belongs_to :user
   belongs_to :test
