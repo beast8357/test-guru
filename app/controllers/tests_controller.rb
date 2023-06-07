@@ -1,17 +1,9 @@
 class TestsController < ApplicationController
 
-  before_action :set_test, only: %i[start show]
+  before_action :set_test, only: %i[start]
 
   def index
     @tests = Test.all
-  end
-
-  def show
-    @test_questions = @test.questions.pluck(:body)
-  end
-
-  def edit
-    
   end
 
   def start
