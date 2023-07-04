@@ -1,0 +1,10 @@
+ru:
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Сложность"
+      questions: "Кол-во вопросов"
+      action: "Действие"
+    test:
+      start: "Старт"
