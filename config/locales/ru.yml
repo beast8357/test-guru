@@ -49,7 +49,7 @@ ru:
         category: "Категория"
         title: "Название"
         level: "Сложность"
-        questions: "Кол-во вопросов"
+        questions: "Вопросы"
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
