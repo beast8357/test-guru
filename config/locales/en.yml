@@ -16,8 +16,8 @@ en:
         level: "Difficulty"
         category_id: "Category"
       answer:
-        body: "Тело ответа"
-        correct: "Верный ответ"
+        body: "Answer"
+        correct: "Correct"
     placeholder:
       test:
         title: "Enter the title"
@@ -32,7 +32,7 @@ en:
       passing: "Passing the %{test_title} test"
       questions_count: "Questions in total: %{count}"
       question_number: "Question №%{number}"
-      next: "Далее"
+      next: "Next"
 
   tests:
     index:
