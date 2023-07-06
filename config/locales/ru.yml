@@ -32,6 +32,18 @@ ru:
     test:
       start: "Старт"
 
+  test_passages:
+    result:
+      success: "Вы успешно прошли тест %{test_title}!"
+      fail: "Вы провалили тест %{test_title} :("
+      result: "Ваш результат: "
+      to_tests: "К тестам"
+    show:
+      passing: "Прохождение теста %{test_title}"
+      questions_count: "Всего вопросов: %{count}"
+      question_number: "Вопрос №%{number}"
+      next: "Далее"
+
   admin:
     tests:
       index:

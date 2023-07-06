@@ -4,6 +4,7 @@ ru:
       test: "Тест"
       question: "Вопрос"
       answer: "Ответ"
+      test_passage: "Прохождение теста"
 
     attributes:
       test:
@@ -15,3 +16,5 @@ ru:
       answer:
         body: "Ответ"
         correct: "Правильность"
+      test_passage:
+        correct_questions: "Правильные ответы"

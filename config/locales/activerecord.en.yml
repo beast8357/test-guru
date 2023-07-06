@@ -4,6 +4,7 @@ en:
       test: "Test"
       question: "Question"
       answer: "Answer"
+      test_passage: "Test Passage"
 
     attributes:
       test:
@@ -15,3 +16,5 @@ en:
       answer:
         body: "Answer"
         correct: "Correct"
+      test_passage:
+        correct_questions: "Correct questions"

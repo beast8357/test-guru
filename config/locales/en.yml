@@ -22,6 +22,18 @@ en:
       test:
         title: "Enter the title"
 
+  test_passages:
+    result:
+      success: "You've successfully passed the %{test_title} test!"
+      fail: "You failed the %{test_title} test :("
+      result: "Your result: "
+      to_tests: "To Tests"
+    show:
+      passing: "Passing the %{test_title} test"
+      questions_count: "Questions in total: %{count}"
+      question_number: "Question №%{number}"
+      next: "Далее"
+
   tests:
     index:
       header: "Tests to Pass"
