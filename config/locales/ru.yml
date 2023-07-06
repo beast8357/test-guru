@@ -1,4 +1,18 @@
 ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Сложность"
+        category_id: "Категория"
+    placeholder:
+      test:
+        title: "Введите название"
+
   tests:
     index:
       header: "Доступные Тесты"
@@ -8,3 +22,29 @@ ru:
       action: "Действие"
     test:
       start: "Старт"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные Тесты"
+        title: "Название"
+        level: "Сложность"
+        questions: "Кол-во вопросов"
+        actions: "Действия"
+        new_test: "Создать Тест"
+      test:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      show:
+        category: "Категория"
+        title: "Название"
+        level: "Сложность"
+        questions: "Кол-во вопросов"
+        actions: "Действия"
+        new_question: "Добавить вопрос"
+        back: "Назад"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"

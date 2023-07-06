@@ -1,4 +1,18 @@
 en:
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Difficulty"
+        category_id: "Category"
+    placeholder:
+      test:
+        title: "Enter the title"
+
   tests:
     index:
       header: "Tests to Pass"
@@ -8,3 +22,29 @@ en:
       action: "Action"
     test:
       start: "Start"
+
+  admin:
+    tests:
+      index:
+        header: "Tests to Pass"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        new_test: "New Test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      show:
+        category: "Category"
+        title: "Title"
+        level: "Difficulty"
+        questions: "Questions"
+        actions: "Actions"
+        new_question: "New Question"
+        back: "Back"
+      new:
+        back: "Back"
+      edit:
+        back: "Back"
