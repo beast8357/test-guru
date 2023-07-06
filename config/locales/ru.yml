@@ -4,6 +4,9 @@ ru:
       test:
         create: "Создать Тест"
         update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
     label:
       test:
         title: "Название"
@@ -47,4 +50,26 @@ ru:
       new:
         back: "Назад"
       edit:
+        back: "Назад"
+
+    questions:
+      question:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      form:
+        edit: "Редактировать вопрос теста %{test_title}"
+        create: "Создать вопрос теста %{test_title}"
+      edit:
+        to_tests: "К тестам"
+        back: "Назад"
+      new:
+        to_tests: "К тестам"
+        back: "Назад"
+      show:
+        header: "Вопрос теста %{test_title}"
+        new_answer: "Создать Ответ"
+        edit: "Редактировать"
+        delete: "Удалить"
+        to_tests: "К тестам"
         back: "Назад"

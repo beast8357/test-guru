@@ -4,6 +4,9 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
     label:
       test:
         title: "Title"
@@ -47,4 +50,26 @@ en:
       new:
         back: "Back"
       edit:
+        back: "Back"
+
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      form:
+        edit: "Edit %{test_title} Question"
+        create: "Create %{test_title} Question"
+      edit:
+        to_tests: "To Tests"
+        back: "Back"
+      new:
+        to_tests: "To Tests"
+        back: "Back"
+      show:
+        header: "%{test_title} Question"
+        new_answer: "Create Answer"
+        edit: "Edit"
+        delete: "Delete"
+        to_tests: "To Tests"
         back: "Back"

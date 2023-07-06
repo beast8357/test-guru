@@ -2,9 +2,12 @@ en:
   activerecord:
     models:
       test: "Test"
+      question: "Question"
 
     attributes:
       test:
         title: "Title"
         category: "Category"
         level: "Difficulty"
+      question:
+        body: "Question"
