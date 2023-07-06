@@ -3,6 +3,7 @@ en:
     models:
       test: "Test"
       question: "Question"
+      answer: "Answer"
 
     attributes:
       test:
@@ -11,3 +12,6 @@ en:
         level: "Difficulty"
       question:
         body: "Question"
+      answer:
+        body: "Answer"
+        correct: "Correct"

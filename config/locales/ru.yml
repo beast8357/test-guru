@@ -7,11 +7,17 @@ ru:
       question:
         create: "Создать Вопрос"
         update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
     label:
       test:
         title: "Название"
         level: "Сложность"
         category_id: "Категория"
+      answer:
+        body: "Тело ответа"
+        correct: "Верный ответ"
     placeholder:
       test:
         title: "Введите название"
@@ -71,5 +77,25 @@ ru:
         new_answer: "Создать Ответ"
         edit: "Редактировать"
         delete: "Удалить"
+        to_tests: "К тестам"
+        back: "Назад"
+
+    answers:
+      answer:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      edit:
+        editing: "Редактирование ответа"
+        to_tests: "К тестам"
+        back: "Назад"
+      new:
+        creating: "Создание ответа"
+        to_tests: "К тестам"
+        back: "Назад"
+      show:
+        question: "Вопрос"
+        answer: "Ответ"
+        correct: "Верный"
         to_tests: "К тестам"
         back: "Назад"

@@ -7,11 +7,17 @@ en:
       question:
         create: "Create Question"
         update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
     label:
       test:
         title: "Title"
         level: "Difficulty"
         category_id: "Category"
+      answer:
+        body: "Тело ответа"
+        correct: "Верный ответ"
     placeholder:
       test:
         title: "Enter the title"
@@ -71,5 +77,25 @@ en:
         new_answer: "Create Answer"
         edit: "Edit"
         delete: "Delete"
+        to_tests: "To Tests"
+        back: "Back"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        editing: "Editing answer"
+        to_tests: "To Tests"
+        back: "Back"
+      new:
+        creating: "Creating answer"
+        to_tests: "To Tests"
+        back: "Back"
+      show:
+        question: "Question"
+        answer: "Answer"
+        correct: "Correct"
         to_tests: "To Tests"
         back: "Back"
