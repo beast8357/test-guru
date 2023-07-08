@@ -18,3 +18,6 @@ ru:
         correct: "Правильность"
       test_passage:
         correct_questions: "Правильные ответы"
+    errors:
+      messages:
+        blank: "не может быть пустым"
