@@ -73,6 +73,11 @@ en:
       start: "Start"
 
   admin:
+    nav:
+      panel: "TestGuru Admin Panel"
+      welcome: "Welcome, "
+      log_out: "Log Out"
+
     tests:
       index:
         header: "Tests to Pass"

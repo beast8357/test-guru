@@ -73,6 +73,11 @@ ru:
       next: "Далее"
 
   admin:
+    nav:
+      panel: "Панель Администратора TestGuru"
+      welcome: "Добро пожаловать, "
+      log_out: "Выйти из системы"
+
     tests:
       index:
         header: "Доступные Тесты"
