@@ -24,6 +24,17 @@ ru:
       test:
         title: "Введите название"
 
+  controllers:
+    admin:
+      base:
+        unauthorized: "Вы не авторизованы для просмотра данной страницы."
+      tests:
+        created: "Тест %{test_title} был успешно создан."
+        deleted: "Тест %{test_title} был успешно удален."
+    users:
+      sessions:
+        hello: "Привет, %{user_name}!"
+
   tests:
     index:
       header: "Доступные Тесты"

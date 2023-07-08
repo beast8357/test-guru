@@ -24,6 +24,17 @@ en:
       test:
         title: "Enter the title"
 
+  controllers:
+    admin:
+      base:
+        unauthorized: "You are not authorized to view this page."
+      tests:
+        created: "New %{test_title} test has been successfully created."
+        deleted: "The %{test_title} test has been successfully deleted."
+    users:
+      sessions:
+        hello: "Hello, %{user_name}!"
+
   test_passages:
     result:
       success: "You've successfully passed the %{test_title} test!"
