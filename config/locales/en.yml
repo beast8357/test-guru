@@ -24,6 +24,21 @@ en:
       test:
         title: "Enter the title"
 
+  helpers:
+    application:
+      year: "Year: %{year}"
+
+  shared:
+    header:
+      log_out: "Log Out"
+      log_in: "Log In"
+      sign_up: "Sign Up"
+      welcome: "Welcome, %{user_name}"
+    footer:
+      author: "Author: Bulat Khairutdinov"
+      description: "This project allows you to take tests on various topics"
+      school_url: "Educational project at the online school Thinknetica"
+
   controllers:
     admin:
       base:

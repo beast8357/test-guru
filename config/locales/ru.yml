@@ -24,6 +24,21 @@ ru:
       test:
         title: "Введите название"
 
+  helpers:
+    application:
+      year: "Год: %{year}"
+
+  shared:
+    header:
+      log_out: "Выйти из системы"
+      log_in: "Войти в систему"
+      sign_up: "Регистрация"
+      welcome: "Добро пожаловать, %{user_name}"
+    footer:
+      author: "Автор: Булат Хайрутдинов"
+      description: "Данный проект предоставляет возможность проходить тесты по различным темам"
+      school_url: "Учебный проект в онлайн-школе Thinknetica"
+
   controllers:
     admin:
       base:
