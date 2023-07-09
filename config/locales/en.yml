@@ -28,6 +28,10 @@ en:
     application:
       year: "Year: %{year}"
 
+  tests_mailer:
+    completed_test:
+      subject: "You completed the TestGuru test"
+
   shared:
     header:
       log_out: "Log Out"

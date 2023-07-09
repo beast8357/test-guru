@@ -28,6 +28,10 @@ ru:
     application:
       year: "Год: %{year}"
 
+  tests_mailer:
+    completed_test:
+      subject: "Вы прошли тест на TestGuru"
+
   shared:
     header:
       log_out: "Выйти из системы"
