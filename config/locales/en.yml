@@ -23,8 +23,6 @@ en:
     placeholder:
       test:
         title: "Enter the title"
-
-  helpers:
     application:
       year: "Year: %{year}"
 

@@ -23,8 +23,6 @@ ru:
     placeholder:
       test:
         title: "Введите название"
-
-  helpers:
     application:
       year: "Год: %{year}"
 
