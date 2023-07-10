@@ -1,0 +1,147 @@
+ru:
+  helpers:
+    select:
+      prompt: "Выбрать"
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Сложность"
+        category_id: "Категория"
+      answer:
+        body: "Тело ответа"
+        correct: "Верный ответ"
+    placeholder:
+      test:
+        title: "Введите название"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы прошли тест на TestGuru"
+
+  shared:
+    header:
+      log_out: "Выйти из системы"
+      log_in: "Войти в систему"
+      sign_up: "Регистрация"
+      welcome: "Добро пожаловать, %{user_name}"
+    footer:
+      current_year: "Год: %{year}"
+      author: "Автор: Булат Хайрутдинов"
+      description: "Данный проект предоставляет возможность проходить тесты по различным темам"
+      school_url: "Учебный проект в онлайн-школе Thinknetica"
+
+  controllers:
+    admin:
+      base:
+        unauthorized: "Вы не авторизованы для просмотра данной страницы."
+      tests:
+        created: "Тест %{test_title} был успешно создан."
+        deleted: "Тест %{test_title} был успешно удален."
+    users:
+      sessions:
+        hello: "Привет, %{user_name}!"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Сложность"
+      questions: "Кол-во вопросов"
+      action: "Действие"
+    test:
+      start: "Старт"
+
+  test_passages:
+    result:
+      success: "Вы успешно прошли тест %{test_title}!"
+      fail: "Вы провалили тест %{test_title} :("
+      result: "Ваш результат: "
+      to_tests: "К тестам"
+    show:
+      passing: "Прохождение теста %{test_title}"
+      questions_count: "Всего вопросов: %{count}"
+      question_number: "Вопрос №%{number}"
+      next: "Далее"
+
+  admin:
+    nav:
+      panel: "Панель Администратора TestGuru"
+      welcome: "Добро пожаловать, "
+      log_out: "Выйти из системы"
+
+    tests:
+      index:
+        header: "Доступные Тесты"
+        title: "Название"
+        level: "Сложность"
+        questions: "Кол-во вопросов"
+        actions: "Действия"
+        new_test: "Создать Тест"
+      test:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      show:
+        category: "Категория"
+        title: "Название"
+        level: "Сложность"
+        questions: "Вопросы"
+        actions: "Действия"
+        new_question: "Добавить вопрос"
+        back: "Назад"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"
+
+    questions:
+      question:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      form:
+        edit: "Редактировать вопрос теста %{test_title}"
+        create: "Создать вопрос теста %{test_title}"
+      edit:
+        to_tests: "К тестам"
+        back: "Назад"
+      new:
+        to_tests: "К тестам"
+        back: "Назад"
+      show:
+        header: "Вопрос теста %{test_title}"
+        new_answer: "Создать Ответ"
+        edit: "Редактировать"
+        delete: "Удалить"
+        to_tests: "К тестам"
+        back: "Назад"
+
+    answers:
+      answer:
+        show: "Просмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+      edit:
+        editing: "Редактирование ответа"
+        to_tests: "К тестам"
+        back: "Назад"
+      new:
+        creating: "Создание ответа"
+        to_tests: "К тестам"
+        back: "Назад"
+      show:
+        question: "Вопрос"
+        answer: "Ответ"
+        correct: "Верный"
+        to_tests: "К тестам"
+        back: "Назад"

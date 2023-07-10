@@ -23,7 +23,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.created_tests.new(test_params)
 
     if @test.save
-      flash[:notice] = "New #{@test.title} test has been successfully created."
+      flash[:notice] = t('controllers.admin.tests.created', test_title: @test.title)
       redirect_to admin_tests_path
     else
       render :new
@@ -41,7 +41,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy
 
-    flash[:notice] = "The #{@test.title} test has been successfully deleted."
+    flash[:notice] = t('controllers.admin.tests.deleted', test_title: @test.title)
     redirect_to admin_tests_path
   end
 

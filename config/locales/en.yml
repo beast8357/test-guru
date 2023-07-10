@@ -1,33 +1,147 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    select:
+      prompt: "Select"
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      answer:
+        create: "Create Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Difficulty"
+        category_id: "Category"
+      answer:
+        body: "Answer"
+        correct: "Correct"
+    placeholder:
+      test:
+        title: "Enter the title"
+
+  tests_mailer:
+    completed_test:
+      subject: "You completed the TestGuru test"
+
+  shared:
+    header:
+      log_out: "Log Out"
+      log_in: "Log In"
+      sign_up: "Sign Up"
+      welcome: "Welcome, %{user_name}"
+    footer:
+      current_year: "Year: %{year}"
+      author: "Author: Bulat Khairutdinov"
+      description: "This project allows you to take tests on various topics"
+      school_url: "Educational project at the online school Thinknetica"
+
+  controllers:
+    admin:
+      base:
+        unauthorized: "You are not authorized to view this page."
+      tests:
+        created: "New %{test_title} test has been successfully created."
+        deleted: "The %{test_title} test has been successfully deleted."
+    users:
+      sessions:
+        hello: "Hello, %{user_name}!"
+
+  test_passages:
+    result:
+      success: "You've successfully passed the %{test_title} test!"
+      fail: "You failed the %{test_title} test :("
+      result: "Your result: "
+      to_tests: "To Tests"
+    show:
+      passing: "Passing the %{test_title} test"
+      questions_count: "Questions in total: %{count}"
+      question_number: "Question №%{number}"
+      next: "Next"
+
+  tests:
+    index:
+      header: "Tests Available"
+      title: "Title"
+      level: "Difficulty"
+      questions: "Questions"
+      action: "Action"
+    test:
+      start: "Start"
+
+  admin:
+    nav:
+      panel: "TestGuru Admin Panel"
+      welcome: "Welcome, "
+      log_out: "Log Out"
+
+    tests:
+      index:
+        header: "Tests Available"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        new_test: "New Test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      show:
+        category: "Category"
+        title: "Title"
+        level: "Difficulty"
+        questions: "Questions"
+        actions: "Actions"
+        new_question: "New Question"
+        back: "Back"
+      new:
+        back: "Back"
+      edit:
+        back: "Back"
+
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      form:
+        edit: "Edit %{test_title} Question"
+        create: "Create %{test_title} Question"
+      edit:
+        to_tests: "To Tests"
+        back: "Back"
+      new:
+        to_tests: "To Tests"
+        back: "Back"
+      show:
+        header: "%{test_title} Question"
+        new_answer: "Create Answer"
+        edit: "Edit"
+        delete: "Delete"
+        to_tests: "To Tests"
+        back: "Back"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      edit:
+        editing: "Editing answer"
+        to_tests: "To Tests"
+        back: "Back"
+      new:
+        creating: "Creating answer"
+        to_tests: "To Tests"
+        back: "Back"
+      show:
+        question: "Question"
+        answer: "Answer"
+        correct: "Correct"
+        to_tests: "To Tests"
+        back: "Back"

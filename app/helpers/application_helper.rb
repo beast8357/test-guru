@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def current_year
-    "Год: #{Time.current.year}"
+    t('.current_year', year: Time.current.year)
   end
 
   def github_url(author, repo)
@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def school_url
-    link_to "Учебный проект в онлайн-школе Thinknetica", "https://thinknetica.com/",
+    link_to t('.school_url'), "https://thinknetica.com/",
             target: :blank
   end
 

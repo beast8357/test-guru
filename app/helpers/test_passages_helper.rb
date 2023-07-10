@@ -2,23 +2,23 @@ module TestPassagesHelper
 
   def results_header(test_passage)
     if test_passage.successful?
-      "You've successfully passed the \'#{test_passage.test.title}\' test!"
+      t('.success', test_title: test_passage.test.title)
     else
-      "You failed the \'#{test_passage.test.title}\' test :("
+      t('.fail', test_title: test_passage.test.title)
     end
   end
 
   def test_results(test_passage)
     if test_passage.successful?
       "<p>
-         Your result: 
+         #{t('.result')}
          <span class='success'>
            #{test_passage.correct_answers_percentage}%
          </span>
        </p>".html_safe
     else
       "<p>
-         Your result: 
+         #{t('.result')} 
          <span class='failure'>
            #{test_passage.correct_answers_percentage}%
          </span>
