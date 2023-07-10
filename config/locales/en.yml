@@ -23,8 +23,6 @@ en:
     placeholder:
       test:
         title: "Enter the title"
-    application:
-      year: "Year: %{year}"
 
   tests_mailer:
     completed_test:
@@ -37,6 +35,7 @@ en:
       sign_up: "Sign Up"
       welcome: "Welcome, %{user_name}"
     footer:
+      current_year: "Year: %{year}"
       author: "Author: Bulat Khairutdinov"
       description: "This project allows you to take tests on various topics"
       school_url: "Educational project at the online school Thinknetica"

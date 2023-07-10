@@ -23,8 +23,6 @@ ru:
     placeholder:
       test:
         title: "Введите название"
-    application:
-      year: "Год: %{year}"
 
   tests_mailer:
     completed_test:
@@ -37,6 +35,7 @@ ru:
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
     footer:
+      current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"
       description: "Данный проект предоставляет возможность проходить тесты по различным темам"
       school_url: "Учебный проект в онлайн-школе Thinknetica"
