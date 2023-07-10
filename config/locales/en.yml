@@ -66,7 +66,7 @@ en:
 
   tests:
     index:
-      header: "Tests to Pass"
+      header: "Tests Available"
       title: "Title"
       level: "Difficulty"
       questions: "Questions"
@@ -82,7 +82,7 @@ en:
 
     tests:
       index:
-        header: "Tests to Pass"
+        header: "Tests Available"
         title: "Title"
         level: "Level"
         questions: "Questions"
