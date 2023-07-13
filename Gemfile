@@ -23,8 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # AUTH
-
 gem 'devise', '~> 4.0'
+
+# LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
 
 # Use Active Storage variant
