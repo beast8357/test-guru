@@ -13,4 +13,8 @@ module ApplicationHelper
             target: :blank
   end
 
+  def icon(name, text)
+    content_tag :i, text, class: "bi bi-#{name}"
+  end
+
 end
