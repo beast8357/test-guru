@@ -34,6 +34,7 @@ ru:
       log_in: "Войти в систему"
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
+      admin_panel: "Панель Администратора"
     footer:
       current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"
