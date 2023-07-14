@@ -13,8 +13,8 @@ module ApplicationHelper
             target: :blank
   end
 
-  def icon(name)
-      "<i class='bi bi-#{name}'></i>".html_safe
+  def icon(name, text)
+    content_tag :i, text, class: "bi bi-#{name}"
   end
 
 end
