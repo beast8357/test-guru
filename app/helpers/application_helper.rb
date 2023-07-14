@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+  FLASH_TYPES = { notice: 'alert-success', alert: 'alert-danger' }.freeze
+
   def current_year
     t('.current_year', year: Time.current.year)
   end
@@ -11,6 +13,12 @@ module ApplicationHelper
   def school_url
     link_to t('.school_url'), "https://thinknetica.com/",
             target: :blank
+  end
+
+  def show_flash
+    flash.map do |flash_type, message|
+      content_tag :p, message, class: "alert #{FLASH_TYPES[flash_type.to_sym]}"
+    end.join.html_safe
   end
 
   def icon(name, text)
