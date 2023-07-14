@@ -76,9 +76,10 @@ ru:
 
   admin:
     nav:
-      panel: "Панель Администратора TestGuru"
+      panel: "Панель Администратора"
       welcome: "Добро пожаловать, "
       log_out: "Выйти из системы"
+      home: "На Главную"
 
     tests:
       index:

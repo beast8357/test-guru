@@ -76,9 +76,10 @@ en:
 
   admin:
     nav:
-      panel: "TestGuru Admin Panel"
+      panel: "Admin Panel"
       welcome: "Welcome, "
       log_out: "Log Out"
+      home: "Home"
 
     tests:
       index:
