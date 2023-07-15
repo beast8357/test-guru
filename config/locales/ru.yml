@@ -101,9 +101,7 @@ ru:
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
-      new:
-        back: "Назад"
-      edit:
+      form:
         back: "Назад"
 
     questions:

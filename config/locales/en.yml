@@ -101,9 +101,7 @@ en:
         actions: "Actions"
         new_question: "New Question"
         back: "Back"
-      new:
-        back: "Back"
-      edit:
+      form:
         back: "Back"
 
     questions:
