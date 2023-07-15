@@ -1,26 +1,44 @@
-<h1><%= t('.passing', test_title: @test_passage.test.title) %></h1>
+<div class="container-fluid mt-4">
+  <h1 class="text-center">
+    <%= t('.passing', test_title: @test_passage.test.title) %>
+  </h1>
 
-<h3><%= t('.questions_count', count: @test_passage.test.questions.count) %></h3>
+  <h5 class="text-center mt-2">
+    <%= t('.questions_count', count: @test_passage.test.questions.count) %>
+  </h5>
 
-<h3><%= t('.question_number', number: @test_passage.current_question.number) %></h3>
+  <table class="table table-bordered border-dark mt-3">
+    <tr>
+      <th>
+        <h5 class="text-center">
+          <%= t('.question_number', number: @test_passage.current_question.number) %>
+        </h5>
+      </th>
+    </tr>
 
-<b>
-  <%= @test_passage.current_question.body %>
-</b>
+    <tr>
+      <th>
+        <h5 class="mt-1 mb-2 d-block">
+          <%= @test_passage.current_question.body %>
+        </h5>
 
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids,
-                                  @test_passage.current_question.answers,
-                                  :id,
-                                  :body,
-                                  include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>
-  <% end %>
+        <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
 
-  <p>
-    <%= form.submit t('.next') %>
-  </p>
-<% end %>
+          <%= form.collection_check_boxes :answer_ids,
+                                          @test_passage.current_question.answers,
+                                          :id,
+                                          :body,
+                                          include_hidden: false do |b| %>
+            <p class="form-check">
+              <%= b.check_box id: "answer_ids_#{b.object.id}", class: "form-check-input" %>
+              <%= b.label class: "form-check-label" %>
+            </p>
+          <% end %>
+          <p>
+            <%= form.submit t('.next'), class: "btn btn-dark mt-3" %>
+          </p>
+        <% end %>
+      </th>
+    </tr>
+  </table>
+</div>
