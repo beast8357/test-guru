@@ -54,6 +54,11 @@ ru:
       new:
         header: "Вход в систему"
         button: "Войти"
+        remember_me: "Запомнить меня"
+        email: "Адрес электронной почты"
+        password: "Пароль"
+        enter_email: "Введите адрес электронной почты"
+        enter_password: "Введите пароль"
       signed_in_with_hello: "Привет, %{username}! Вход в систему выполнен."
       signed_in: "Вход в систему выполнен."
       signed_out: "Выход из системы выполнен."
