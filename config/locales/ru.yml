@@ -129,17 +129,14 @@ ru:
         show: "Просмотреть"
         edit: "Редактировать"
         delete: "Удалить"
-      edit:
-        editing: "Редактирование ответа"
-        to_tests: "К тестам"
-        back: "Назад"
-      new:
-        creating: "Создание ответа"
+      form:
+        edit: "Редактирование ответа к вопросу: "
+        create: "Создание ответа к вопросу: "
         to_tests: "К тестам"
         back: "Назад"
       show:
-        question: "Вопрос"
-        answer: "Ответ"
-        correct: "Верный"
+        question: "Вопрос:"
+        answer: "Ответ:"
+        correct: "Верный:"
         to_tests: "К тестам"
         back: "Назад"

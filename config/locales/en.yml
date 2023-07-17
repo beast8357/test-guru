@@ -129,17 +129,14 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
-      edit:
-        editing: "Editing answer"
-        to_tests: "To Tests"
-        back: "Back"
-      new:
-        creating: "Creating answer"
+      form:
+        edit: "Answer editing"
+        create: "Answer creation"
         to_tests: "To Tests"
         back: "Back"
       show:
-        question: "Question"
-        answer: "Answer"
-        correct: "Correct"
+        question: "Question:"
+        answer: "Answer:"
+        correct: "Correct:"
         to_tests: "To Tests"
         back: "Back"
