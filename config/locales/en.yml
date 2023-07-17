@@ -110,17 +110,15 @@ en:
         edit: "Edit"
         delete: "Delete"
       form:
-        edit: "Edit %{test_title} Question"
-        create: "Create %{test_title} Question"
-      edit:
-        to_tests: "To Tests"
-        back: "Back"
-      new:
+        edit: "Question editing"
+        create: "Question creation"
         to_tests: "To Tests"
         back: "Back"
       show:
         header: "%{test_title} Question"
-        new_answer: "Create Answer"
+        answers: "Answers"
+        actions: "Actions"
+        new_answer: "New Answer"
         edit: "Edit"
         delete: "Delete"
         to_tests: "To Tests"

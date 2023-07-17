@@ -110,17 +110,15 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
       form:
-        edit: "Редактировать вопрос теста %{test_title}"
-        create: "Создать вопрос теста %{test_title}"
-      edit:
-        to_tests: "К тестам"
-        back: "Назад"
-      new:
+        edit: "Редактирование вопроса"
+        create: "Создание вопроса"
         to_tests: "К тестам"
         back: "Назад"
       show:
         header: "Вопрос теста %{test_title}"
-        new_answer: "Создать Ответ"
+        answers: "Ответы"
+        actions: "Действия"
+        new_answer: "Добавить Ответ"
         edit: "Редактировать"
         delete: "Удалить"
         to_tests: "К тестам"

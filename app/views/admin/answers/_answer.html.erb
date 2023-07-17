@@ -1,9 +1,10 @@
-<li>
-  <%= answer.body %><br>
-  <%= link_to t('.show'), admin_test_question_answer_path(current_test, @question, answer) %> |
-  <%= link_to t('.edit'), edit_admin_test_question_answer_path(current_test, @question, answer) %> |
-  <%= link_to t('.delete'),
+<tr>
+  <td><%= answer.body %></td>
+  <td><%= link_to t('.show'), admin_test_question_answer_path(current_test, @question, answer) %></td>
+  <td><%= link_to t('.edit'), edit_admin_test_question_answer_path(current_test, @question, answer) %></td>
+  <td><%= link_to t('.delete'),
               admin_test_question_answer_path(current_test, @question, answer),
               method: :delete,
               data:   { confirm: 'Are you sure?' } %>
-</li>
+  </td>
+</tr>

@@ -1,26 +1,36 @@
-<h1><%= t('.header', test_title: @question.test.title) %></h1>
+<div class="container">
+  <h1 class="mt-3 mb-2">
+    <%= t('.header', test_title: @question.test.title) %>:
+  </h1>
 
-<p><%= @question.body %></p>
+  <h2>
+    <%= @question.body %>
+  </h2>
 
-<h2>Answers</h2>
-
-<ol>
-  <%= render @question.answers %>
-</ol>
-
-<p>
-  <%= link_to t('.new_answer'), new_admin_test_question_answer_path(current_test, @question) %>
-</p>
-
-<p>
-  <%= link_to t('.edit'), edit_admin_test_question_path(current_test, @question) %> |
+  <%= link_to t('.edit'), edit_admin_test_question_path(current_test, @question), class: "btn btn-primary" %>
   <%= link_to t('.delete'),
               admin_test_question_path(current_test, @question),
               method: :delete,
-              data:   { confirm: 'Are you sure?' } %>
-</p>
+              data:   { confirm: 'Are you sure?' },
+              class: "btn btn-primary" %>
 
-<p>
-  <%= link_to t('.to_tests'), admin_tests_path %> |
-  <%= link_to t('.back'), admin_test_path(current_test) %>
-</p>
+  <table class="table table-bordered border-dark mt-3">
+    <tr>
+      <th class="text-center"><%= t('.answers') %></th>
+      <th class="text-center" colspan="3"><%= t('.actions') %></th>
+    </tr>
+
+    <%= render @question.answers %>
+  </table>
+</div>
+
+<div class="container">
+  <%= link_to t('.new_answer'), new_admin_test_question_answer_path(current_test, @question), class: "btn btn-primary" %>
+</div>
+
+<div class="container text-center">
+  <p>
+    <%= link_to t('.to_tests'), admin_tests_path, class: "btn btn-primary" %>
+    <%= link_to t('.back'), admin_test_path(current_test), class: "btn btn-primary" %>
+  </p>
+</div>
