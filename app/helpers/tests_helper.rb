@@ -6,4 +6,12 @@ module TestsHelper
     TEST_LEVELS[test.level] || 'Insane!'
   end
 
+  def test_header(test)
+    if test.new_record?
+      t('.create')
+    else
+      t('.edit')
+    end
+  end
+
 end
