@@ -1,18 +1,7 @@
-<div class="container">
-  <h1 class="mt-3 mb-2">
-    <%= t('.header', test_title: @question.test.title) %>:
-  </h1>
+<div class="container mt-3">
+  <h3 class="mb-2"><%= t('.header', test_title: @question.test.title) %></h3>
 
-  <h2>
-    <%= @question.body %>
-  </h2>
-
-  <%= link_to t('.edit'), edit_admin_test_question_path(current_test, @question), class: "btn btn-primary" %>
-  <%= link_to t('.delete'),
-              admin_test_question_path(current_test, @question),
-              method: :delete,
-              data:   { confirm: 'Are you sure?' },
-              class: "btn btn-primary" %>
+  <h3><%= @question.body %></h3>
 
   <table class="table table-bordered border-dark mt-3">
     <tr>

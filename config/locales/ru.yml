@@ -4,14 +4,14 @@ ru:
       prompt: "Выбрать"
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: "Создать"
+        update: "Сохранить изменения"
       question:
-        create: "Создать Вопрос"
-        update: "Обновить Вопрос"
+        create: "Создать"
+        update: "Сохранить изменения"
       answer:
-        create: "Создать Ответ"
-        update: "Обновить Ответ"
+        create: "Создать"
+        update: "Сохранить изменения"
     label:
       test:
         title: "Название"
@@ -20,9 +20,13 @@ ru:
       answer:
         body: "Тело ответа"
         correct: "Верный ответ"
+      question:
+        body: "Тело вопроса"
     placeholder:
       test:
         title: "Введите название"
+      question:
+        body: "Введите текст"
 
   tests_mailer:
     completed_test:
@@ -54,7 +58,7 @@ ru:
 
   tests:
     index:
-      header: "Доступные Тесты"
+      header: "Доступные тесты"
       title: "Название"
       level: "Сложность"
       questions: "Кол-во вопросов"
@@ -83,31 +87,33 @@ ru:
 
     tests:
       index:
-        header: "Доступные Тесты"
+        header: "Доступные тесты"
         title: "Название"
         level: "Сложность"
         questions: "Кол-во вопросов"
         actions: "Действия"
-        new_test: "Создать Тест"
+        new_test: "Создать тест"
       test:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
       show:
-        category: "Категория"
-        title: "Название"
-        level: "Сложность"
-        questions: "Вопросы"
+        category: "Категория: "
+        title: "Название: "
+        level: "Сложность: "
+        questions: "Вопросы: "
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
       form:
+        edit: "Редактирование теста"
+        create: "Создание теста"
         back: "Назад"
 
     questions:
       question:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
       form:
         edit: "Редактирование вопроса"
@@ -115,28 +121,28 @@ ru:
         to_tests: "К тестам"
         back: "Назад"
       show:
-        header: "Вопрос теста %{test_title}"
+        header: "Вопрос теста %{test_title}:"
         answers: "Ответы"
         actions: "Действия"
-        new_answer: "Добавить Ответ"
-        edit: "Редактировать"
+        new_answer: "Добавить ответ"
+        edit: "Редактирование"
         delete: "Удалить"
         to_tests: "К тестам"
         back: "Назад"
 
     answers:
       answer:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
       form:
-        edit: "Редактирование ответа к вопросу: "
-        create: "Создание ответа к вопросу: "
+        edit: "Редактирование ответа на вопрос: "
+        create: "Создание ответа на вопрос: "
         to_tests: "К тестам"
         back: "Назад"
       show:
-        question: "Вопрос:"
-        answer: "Ответ:"
-        correct: "Верный:"
+        question: "Ответ на вопрос:"
+        answer: "Ответ"
+        correct: "Верный"
         to_tests: "К тестам"
         back: "Назад"

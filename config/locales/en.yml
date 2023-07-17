@@ -4,25 +4,29 @@ en:
       prompt: "Select"
     submit:
       test:
-        create: "Create Test"
-        update: "Update Test"
+        create: "Create"
+        update: "Save changes"
       question:
-        create: "Create Question"
-        update: "Update Question"
+        create: "Create"
+        update: "Save changes"
       answer:
-        create: "Create Answer"
-        update: "Update Answer"
+        create: "Create"
+        update: "Save changes"
     label:
       test:
         title: "Title"
         level: "Difficulty"
         category_id: "Category"
       answer:
-        body: "Answer"
+        body: "Answer body"
         correct: "Correct"
+      question:
+        body: "Question body"
     placeholder:
       test:
         title: "Enter the title"
+      question:
+        body: "Enter text"
 
   tests_mailer:
     completed_test:
@@ -57,7 +61,7 @@ en:
       success: "You've successfully passed the %{test_title} test!"
       fail: "You failed the %{test_title} test :("
       result: "Your result: "
-      to_tests: "To Tests"
+      to_tests: "To tests"
     show:
       passing: "Passing the %{test_title} test"
       questions_count: "Questions in total: %{count}"
@@ -66,7 +70,7 @@ en:
 
   tests:
     index:
-      header: "Tests Available"
+      header: "Tests available"
       title: "Title"
       level: "Difficulty"
       questions: "Questions"
@@ -83,25 +87,27 @@ en:
 
     tests:
       index:
-        header: "Tests Available"
+        header: "Tests available"
         title: "Title"
         level: "Level"
         questions: "Questions"
         actions: "Actions"
-        new_test: "New Test"
+        new_test: "New test"
       test:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
       show:
-        category: "Category"
-        title: "Title"
-        level: "Difficulty"
+        category: "Category: "
+        title: "Title: "
+        level: "Difficulty: "
         questions: "Questions"
         actions: "Actions"
-        new_question: "New Question"
+        new_question: "New question"
         back: "Back"
       form:
+        edit: "Test editing"
+        create: "Test creation"
         back: "Back"
 
     questions:
@@ -112,16 +118,16 @@ en:
       form:
         edit: "Question editing"
         create: "Question creation"
-        to_tests: "To Tests"
+        to_tests: "To tests"
         back: "Back"
       show:
-        header: "%{test_title} Question"
+        header: "%{test_title} question:"
         answers: "Answers"
         actions: "Actions"
-        new_answer: "New Answer"
+        new_answer: "New answer"
         edit: "Edit"
         delete: "Delete"
-        to_tests: "To Tests"
+        to_tests: "To tests"
         back: "Back"
 
     answers:
@@ -130,13 +136,13 @@ en:
         edit: "Edit"
         delete: "Delete"
       form:
-        edit: "Answer editing"
-        create: "Answer creation"
-        to_tests: "To Tests"
+        edit: "Editing the answer to the question:"
+        create: "Creating an answer to the question:"
+        to_tests: "To tests"
         back: "Back"
       show:
-        question: "Question:"
-        answer: "Answer:"
-        correct: "Correct:"
-        to_tests: "To Tests"
+        question: "The answer to the question:"
+        answer: "Answer"
+        correct: "Correct"
+        to_tests: "To tests"
         back: "Back"
