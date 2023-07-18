@@ -1,18 +1,22 @@
-<h1><%= t('.question') %></h1>
+<div class="container mt-3">
+  <h3><%= t('.question') %></h3>
 
-<p>
-  <%= @answer.question.body %>
-</p>
+  <h3><%= @answer.question.body %></h3>
 
-<p>
-  <b><%= t('.answer') %>:</b>
-  <%= @answer.body %>
-</p>
+  <table class="table table-bordered border-dark mt-3">
+    <tr class="text-center">
+      <th><%= t('.answer') %></th>
+      <th><%= t('.correct') %></th>
+    </tr>
 
-<p>
-  <b><%= t('.correct') %>:</b>
-  <%= @answer.correct %>
-</p>
+    <tr class="text-center">
+      <th><%= @answer.body %></th>
+      <th><%= @answer.correct %></th>
+    </tr>
+  </table>
+</div>
 
-<%= link_to t('.to_tests'), admin_tests_path %> |
-<%= link_to t('.back'), admin_test_question_path(current_test, current_question) %>
+<div class="container text-center">
+  <%= link_to t('.to_tests'), admin_tests_path, class: "btn btn-primary" %>
+  <%= link_to t('.back'), admin_test_question_path(current_test, current_question), class: "btn btn-primary" %>
+</div>

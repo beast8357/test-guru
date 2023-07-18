@@ -4,14 +4,14 @@ ru:
       prompt: "Выбрать"
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: "Создать"
+        update: "Сохранить изменения"
       question:
-        create: "Создать Вопрос"
-        update: "Обновить Вопрос"
+        create: "Создать"
+        update: "Сохранить изменения"
       answer:
-        create: "Создать Ответ"
-        update: "Обновить Ответ"
+        create: "Создать"
+        update: "Сохранить изменения"
     label:
       test:
         title: "Название"
@@ -20,9 +20,13 @@ ru:
       answer:
         body: "Тело ответа"
         correct: "Верный ответ"
+      question:
+        body: "Тело вопроса"
     placeholder:
       test:
         title: "Введите название"
+      question:
+        body: "Введите текст"
 
   tests_mailer:
     completed_test:
@@ -34,6 +38,7 @@ ru:
       log_in: "Войти в систему"
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
+      admin_panel: "Панель Администратора"
     footer:
       current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"
@@ -53,7 +58,7 @@ ru:
 
   tests:
     index:
-      header: "Доступные Тесты"
+      header: "Доступные тесты"
       title: "Название"
       level: "Сложность"
       questions: "Кол-во вопросов"
@@ -75,72 +80,68 @@ ru:
 
   admin:
     nav:
-      panel: "Панель Администратора TestGuru"
+      panel: "Панель Администратора"
       welcome: "Добро пожаловать, "
       log_out: "Выйти из системы"
+      home: "На Главную"
 
     tests:
       index:
-        header: "Доступные Тесты"
+        header: "Доступные тесты"
         title: "Название"
         level: "Сложность"
         questions: "Кол-во вопросов"
         actions: "Действия"
-        new_test: "Создать Тест"
+        new_test: "Создать тест"
       test:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
       show:
-        category: "Категория"
-        title: "Название"
-        level: "Сложность"
-        questions: "Вопросы"
+        category: "Категория: "
+        title: "Название: "
+        level: "Сложность: "
+        questions: "Вопросы: "
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
-      new:
-        back: "Назад"
-      edit:
+      form:
+        edit: "Редактирование теста"
+        create: "Создание теста"
         back: "Назад"
 
     questions:
       question:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
       form:
-        edit: "Редактировать вопрос теста %{test_title}"
-        create: "Создать вопрос теста %{test_title}"
-      edit:
-        to_tests: "К тестам"
-        back: "Назад"
-      new:
+        edit: "Редактирование вопроса"
+        create: "Создание вопроса"
         to_tests: "К тестам"
         back: "Назад"
       show:
-        header: "Вопрос теста %{test_title}"
-        new_answer: "Создать Ответ"
-        edit: "Редактировать"
+        header: "Вопрос теста %{test_title}:"
+        answers: "Ответы"
+        actions: "Действия"
+        new_answer: "Добавить ответ"
+        edit: "Редактирование"
         delete: "Удалить"
         to_tests: "К тестам"
         back: "Назад"
 
     answers:
       answer:
-        show: "Просмотреть"
-        edit: "Редактировать"
+        show: "Просмотр"
+        edit: "Редактирование"
         delete: "Удалить"
-      edit:
-        editing: "Редактирование ответа"
-        to_tests: "К тестам"
-        back: "Назад"
-      new:
-        creating: "Создание ответа"
+      form:
+        edit: "Редактирование ответа на вопрос: "
+        create: "Создание ответа на вопрос: "
         to_tests: "К тестам"
         back: "Назад"
       show:
-        question: "Вопрос"
+        question: "Ответ на вопрос:"
         answer: "Ответ"
         correct: "Верный"
         to_tests: "К тестам"

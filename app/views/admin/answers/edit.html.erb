@@ -1,10 +1,1 @@
-<h1><%= t('.editing') %></h1>
-
-<p>
-  <%= @answer.question.body %>
-</p>
-
 <%= render 'form' %>
-
-<%= link_to t('.to_tests'), admin_tests_path %> |
-<%= link_to t('.back'), admin_test_question_path(current_test, current_question) %>
