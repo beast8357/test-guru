@@ -4,7 +4,7 @@
   <span class="navbar-text">
     <%= t('.welcome') %><%= current_user.email %>
 
-    <button type="button" class="btn btn-ligth">
+    <button type="button" class="btn btn-primary">
       <%= link_to t('.log_out'), destroy_user_session_path,
                                  method: :delete,
                                  class: "nav-link active" %>
