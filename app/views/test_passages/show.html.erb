@@ -35,6 +35,7 @@
             </p>
           <% end %>
           <p>
+            <%= link_to t('.create_gist'), gist_test_passage_path(@test_passage), class: 'btn btn-dark mt-3', method: :post %>
             <%= form.submit t('.next'), class: "btn btn-dark mt-3" %>
           </p>
         <% end %>

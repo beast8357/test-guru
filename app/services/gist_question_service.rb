@@ -22,7 +22,7 @@ class GistQuestionService
           content: gist_content
         }
       }
-    }    
+    }
   end
 
   def gist_content

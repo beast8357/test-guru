@@ -77,6 +77,10 @@ ru:
       questions_count: "Всего вопросов: %{count}"
       question_number: "Вопрос №%{number}"
       next: "Далее"
+      create_gist: 'Создать gist'
+    gist:
+      success: "Gist успешно сохранен."
+      failure: "Во время сохранения gist произошла ошибка."
 
   admin:
     nav:
