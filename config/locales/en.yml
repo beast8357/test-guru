@@ -69,7 +69,7 @@ en:
       next: "Next"
       create_gist: 'Create gist'
     gist:
-      succes: "Gist was succesfully created."
+      succes: "Gist was succesfully created: %{url}"
       failure: "An error occured while saving gist."
 
   tests:
