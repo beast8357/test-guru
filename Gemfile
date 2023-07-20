@@ -38,6 +38,9 @@ gem 'faraday'
 # Gist-client
 gem "octokit", "~> 5.0"
 
+# Loading environment variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
