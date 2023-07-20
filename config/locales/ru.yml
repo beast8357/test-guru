@@ -154,3 +154,10 @@ ru:
         correct: "Верный"
         to_tests: "К тестам"
         back: "Назад"
+
+    gists:
+      index:
+        header: "Список всех gist'ов"
+        question: "Вопрос"
+        url: "Ссылка"
+        email: "Email пользователя"

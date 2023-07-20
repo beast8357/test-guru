@@ -154,3 +154,10 @@ en:
         correct: "Correct"
         to_tests: "To tests"
         back: "Back"
+
+    gists:
+      index:
+        header: "List of all gists"
+        question: "Question"
+        url: "URL"
+        email: "User email"
