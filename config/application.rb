@@ -11,7 +11,6 @@ module TestGuru
     config.load_defaults 6.1
     config.time_zone = 'Moscow'
     config.i18n.default_locale = :en
-    config.autoload_paths << "#{Rails.root}/lib/clients"
 
     Dotenv::Railtie.load if ['development', 'test'].include? ENV['RAILS_ENV']
   end

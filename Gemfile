@@ -32,9 +32,6 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0'
 
-# Networking
-gem 'faraday'
-
 # Gist-client
 gem "octokit", "~> 5.0"
 
