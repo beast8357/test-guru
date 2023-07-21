@@ -18,7 +18,8 @@
 
     <tr>
       <th>
-        <h5 class="mt-1 mb-2 d-block">
+        <p><%= link_to icon('github', t('.create_gist')), gist_path, class: "btn btn-outline-dark mt-2", method: :post %></p>
+        <h5 class="mb-2 d-block">
           <%= @test_passage.current_question.body %>
         </h5>
 
@@ -34,9 +35,8 @@
               <%= b.label class: "form-check-label" %>
             </p>
           <% end %>
-          <p>
-            <%= form.submit t('.next'), class: "btn btn-dark mt-3" %>
-          </p>
+
+          <p><%= form.submit t('.next'), class: "btn btn-dark mt-3" %></p>
         <% end %>
       </th>
     </tr>
