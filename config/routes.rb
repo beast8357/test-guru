@@ -33,4 +33,6 @@ Rails.application.routes.draw do
     resources :gists, only: :index
   end
 
+  resource :gist, only: :create
+
 end
