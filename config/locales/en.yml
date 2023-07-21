@@ -67,7 +67,7 @@ en:
       questions_count: "Questions in total: %{count}"
       question_number: "Question №%{number}"
       next: "Next"
-      create_gist: 'Create gist'
+      create_gist: ' Create a gist'
 
   tests:
     index:
@@ -163,3 +163,4 @@ en:
         question: "Question"
         url: "URL"
         email: "User email"
+        back: "Back"
