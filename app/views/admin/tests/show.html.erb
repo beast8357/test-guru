@@ -16,14 +16,16 @@
     </h3>
   </table>
 
-  <table class="table table-bordered border-dark">
-    <tr>
-      <th class="text-center"><%= t('.questions') %></th>
-      <th class="text-center" colspan="3"><%= t('.actions') %></th>
-    </tr>
+  <div class="table-responsive">
+    <table class="table table-bordered border-dark">
+      <tr>
+        <th class="text-center"><%= t('.questions') %></th>
+        <th class="text-center" colspan="3"><%= t('.actions') %></th>
+      </tr>
 
-    <%= render @test.questions %>
-  </table>
+      <%= render @test.questions %>
+    </table>
+  </div>
 </div>
 
 <div class="container">
