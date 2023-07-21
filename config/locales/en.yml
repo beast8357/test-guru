@@ -101,6 +101,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         new_test: "New test"
+        show_gists: " Show gists"
       test:
         show: "Show"
         edit: "Edit"

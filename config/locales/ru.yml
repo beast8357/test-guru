@@ -101,6 +101,7 @@ ru:
         questions: "Кол-во вопросов"
         actions: "Действия"
         new_test: "Создать тест"
+        show_gists: " Просмотр gist'ов"
       test:
         show: "Просмотр"
         edit: "Редактирование"
