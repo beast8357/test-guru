@@ -84,7 +84,7 @@ en:
       description: "Вопрос теста %{test_title} - TestGuru"
 
   gists:
-    succes: "Gist was succesfully created: %{url}"
+    success: "Gist was succesfully created: %{url}"
     failure: "An error occured while saving gist."
 
   admin:

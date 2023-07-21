@@ -3,9 +3,10 @@ class GistsController < ApplicationController
   before_action :set_test_passage, only: :create
 
   def create
-    result = GistQuestionService.new(@test_passage.current_question).call
+    gist = GistQuestionService.new(@test_passage.current_question)
+    result = gist.call
 
-    if result.success?
+    if gist.success?
       current_user.gists.create(question: @test_passage.current_question, url: result.html_url)
       flash[:notice] = t('.success', url: result.html_url)
     else
