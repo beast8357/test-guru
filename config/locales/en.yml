@@ -38,6 +38,9 @@ en:
       log_in: "Log In"
       sign_up: "Sign Up"
       welcome: "Welcome, %{user_name}"
+      select: "Select language"
+      en: "English"
+      ru: "Russian"
       admin_panel: "Admin Panel"
     footer:
       current_year: "Year: %{year}"
@@ -91,6 +94,9 @@ en:
     nav:
       panel: "Admin Panel"
       welcome: "Welcome, "
+      select: "Select language"
+      en: "English"
+      ru: "Russian"
       log_out: "Log Out"
       home: "Home"
 

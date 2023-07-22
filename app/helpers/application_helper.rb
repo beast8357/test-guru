@@ -25,4 +25,8 @@ module ApplicationHelper
     content_tag :i, text, class: "bi bi-#{name}"
   end
 
+  def select_language(lang)
+    url_for(lang: lang.to_sym)
+  end
+
 end
