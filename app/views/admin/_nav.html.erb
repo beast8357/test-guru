@@ -1,13 +1,33 @@
 <nav class="navbar navbar-dark bg-primary">
-  <%= link_to "TestGuru", root_path, class: "navbar-brand fs-4 mx-4" %>
+  <div class="container-fluid">
+    <%= link_to "TestGuru", root_path, class: "navbar-brand fs-4 mx-5" %>
 
-  <span class="navbar-text">
-    <%= t('.welcome') %><%= current_user.email %>
+    <div class="nav-item">
+      <span class="btn btn-primary disabled">
+        <%= t('.welcome') %><%= current_user.email %>
+      </span>
 
-    <button type="button" class="btn btn-primary">
-      <%= link_to t('.log_out'), destroy_user_session_path,
-                                 method: :delete,
-                                 class: "nav-link active" %>
-    </button>
-  </span>
+      <span class="nav-item dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= t('.select') %>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button">
+            <%= link_to t('.en'), select_language(:en), class: "nav-link active" %>
+          </button></li>
+
+          <li><button class="dropdown-item" type="button">
+            <%= link_to t('.ru'), select_language(:ru), class: "nav-link active" %>
+          </button></li>
+        </ul>
+      </span>
+
+      <button type="button" class="btn btn-primary">
+        <%= link_to t('.log_out'), destroy_user_session_path,
+                                   method: :delete,
+                                   class: "nav-link active" %>
+      </button>
+    </div>
+  </div>
 </nav>

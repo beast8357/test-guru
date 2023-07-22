@@ -1,31 +1,51 @@
 <nav class="navbar navbar-dark bg-dark">
-  <%= link_to "TestGuru", root_path, class: "navbar-brand fs-4 mx-4" %>
+  <div class="container-fluid">
+    <%= link_to "TestGuru", root_path, class: "navbar-brand fs-4 mx-5" %>
 
-  <span class="navbar-text">
-    <% if user_signed_in?%>
-      <%= t('.welcome', user_name: current_user.first_name) %>
+    <div class="nav-item">
+      <% if user_signed_in?%>
+        <span class="btn btn-dark disabled">
+          <%= t('.welcome', user_name: current_user.first_name) %>
+        </span>
+        <% if current_user.admin?%>
+        <button type="button" class="btn btn-dark">
+          <%= link_to t('.admin_panel'), admin_tests_path,
+                                         class: "nav-link active" %>
+        </button>
+        <% end %>
 
-      <% if current_user.admin?%>
-      <button type="button" class="btn btn-dark">
-        <%= link_to t('.admin_panel'), admin_tests_path,
-                                       class: "nav-link active" %>
-      </button>
+        <span class="nav-item dropdown">
+          <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= t('.select') %>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">
+              <%= link_to t('.en'), select_language(:en), class: "nav-link active" %>
+            </button></li>
+
+            <li><button class="dropdown-item" type="button">
+              <%= link_to t('.ru'), select_language(:ru), class: "nav-link active" %>
+            </button></li>
+          </ul>
+        </span>
+
+        <button type="button" class="btn btn-dark">
+          <%= link_to t('.log_out'), destroy_user_session_path,
+                                     method: :delete,
+                                     class: "nav-link active" %>
+        </button>
+      <% else %>
+        <button type="button" class="btn btn-dark">
+          <%= link_to t('.log_in'), new_user_session_path,
+                                    class: "nav-link active" %>
+        </button>
+
+        <button type="button" class="btn btn-dark">
+          <%= link_to t('.sign_up'), new_user_registration_path,
+                                     class: "nav-link active" %>
+        </button>
       <% end %>
-
-      <button type="button" class="btn btn-dark">
-        <%= link_to t('.log_out'), destroy_user_session_path,
-                                   method: :delete,
-                                   class: "nav-link active" %>
-      </button>
-    <% else %>
-      <button type="button" class="btn btn-dark">
-        <%= link_to t('.log_in'), new_user_session_path,
-                                  class: "nav-link active" %>
-      </button>
-      <button type="button" class="btn btn-dark">
-        <%= link_to t('.sign_up'), new_user_registration_path,
-                                   class: "nav-link active" %>
-      </button>
-    <% end %>
-  </span>
+    </div>
+  </div>
 </nav>
