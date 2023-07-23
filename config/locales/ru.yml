@@ -117,7 +117,7 @@ ru:
         category: "Категория: "
         title: "Название: "
         level: "Сложность: "
-        questions: "Вопросы: "
+        questions: "Вопросы "
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
