@@ -31,6 +31,7 @@ gem 'rails-i18n', '~> 6.0.0'
 # UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0'
+gem 'octicons_helper'
 
 # Gist-client
 gem "octokit", "~> 5.0"
