@@ -1,7 +1,22 @@
+const user = {
+  _role: '',
+  set role(arg) { if (arg === 'user' || arg === 'admin') { this._role = arg } },
+  get role() { return this._role }
+}
+
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('.sort-by-title')
+  var controlAdmin = document.querySelector('.sort-by-title-admin')
 
-  if (control) { control.addEventListener('click', sortRowsByTitle) }
+  if (control) {
+    user.role = 'user'
+    control.addEventListener('click', sortRowsByTitle)
+  }
+
+  if (controlAdmin) {
+    user.role = 'admin'
+    controlAdmin.addEventListener('click', sortRowsByTitle)
+  }
 })
 
 function sortRowsByTitle() {
@@ -27,9 +42,14 @@ function sortRowsByTitle() {
   }
 
   var sortedTable = document.createElement('table')
-  sortedTable.classList.add('table', 'table-bordered', 'border-dark')
+
+  if (user.role === 'admin') { sortedTable.classList.add('table', 'table-bordered', 'border-dark') }
+  if (user.role === 'user') { sortedTable.classList.add('table', 'table-bordered', 'table-striped') }
 
   var sortedTableHeader = sortedTable.createTHead()
+
+  if (user.role === 'user') { sortedTableHeader.classList.add('table-dark') }
+
   sortedTableHeader.appendChild(rows[0])
 
   var sortedTableBody = sortedTable.createTBody()
