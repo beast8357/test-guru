@@ -1,17 +1,15 @@
 const user = {
-  _role: '',
-  set role(arg) { if (arg === 'user' || arg === 'admin') { this._role = arg } },
-  get role() { return this._role }
+  _role: 'user',
+  set role(arg) { if (arg === 'admin') { this._role = arg } },
+  get role() { return this._role },
+  isAdmin() { return this._role === 'admin' ? true : false },
 }
 
 document.addEventListener('turbolinks:load', function() {
   var control = document.querySelector('.sort-by-title')
   var controlAdmin = document.querySelector('.sort-by-title-admin')
 
-  if (control) {
-    user.role = 'user'
-    control.addEventListener('click', sortRowsByTitle)
-  }
+  if (control) { control.addEventListener('click', sortRowsByTitle) }
 
   if (controlAdmin) {
     user.role = 'admin'
@@ -42,13 +40,14 @@ function sortRowsByTitle() {
   }
 
   var sortedTable = document.createElement('table')
+  sortedTable.classList.add('table', 'table-bordered')
 
-  if (user.role === 'admin') { sortedTable.classList.add('table', 'table-bordered', 'border-dark') }
-  if (user.role === 'user') { sortedTable.classList.add('table', 'table-bordered', 'table-striped') }
+  if (user.isAdmin()) { sortedTable.classList.add('border-dark') }
+  if (!user.isAdmin()) { sortedTable.classList.add('table-striped') }
 
   var sortedTableHeader = sortedTable.createTHead()
 
-  if (user.role === 'user') { sortedTableHeader.classList.add('table-dark') }
+  if (!user.isAdmin()) { sortedTableHeader.classList.add('table-dark') }
 
   sortedTableHeader.appendChild(rows[0])
 
