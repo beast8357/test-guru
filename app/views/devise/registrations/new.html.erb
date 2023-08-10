@@ -37,6 +37,11 @@
               <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
             </p>
 
+            <p>
+              <%= octicon 'check', class: 'text-success hide' %>
+              <%= octicon 'alert', class: 'text-danger hide' %>
+            </p>
+
             <%= f.submit t('.button'), class: "btn btn-dark" %>
           <% end %>
         </div>
