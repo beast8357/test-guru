@@ -1,8 +1,10 @@
-@import 'bootstrap';
-@import 'test_passages';
+@import "bootstrap";
+@import "test_passages";
 @import "bootstrap-icons/font/bootstrap-icons";
 @font-face {
   font-family: "bootstrap-icons";
   src: font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
     font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
 }
+@import "typography/icons";
+@import "global";
