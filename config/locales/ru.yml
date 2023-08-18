@@ -125,6 +125,8 @@ ru:
         edit: "Редактирование теста"
         create: "Создание теста"
         back: "Назад"
+      form_inline:
+        submit: "ОК"
 
     questions:
       question:

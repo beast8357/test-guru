@@ -125,6 +125,8 @@ en:
         edit: "Test editing"
         create: "Test creation"
         back: "Back"
+      form_inline:
+        submit: "OK"
 
     questions:
       question:
