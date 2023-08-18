@@ -111,7 +111,7 @@ ru:
         show_gists: " Просмотр gist'ов"
       test:
         show: "Просмотр"
-        edit: "Редактирование"
+        edit: "Редактировать"
         delete: "Удалить"
       show:
         category: "Категория: "
