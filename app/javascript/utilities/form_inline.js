@@ -24,9 +24,5 @@ function formInlineHanlder(testId) {
   $formInline.toggle()
   $testTitle.toggle()
 
-  if ($formInline.is(':visible')) {
-    link.textContent = 'Cancel'
-  } else {
-    link.textContent = 'Edit'
-  }
+  link.textContent = $formInline.is(':visible') ? translations.cancel : translations.edit
 }
