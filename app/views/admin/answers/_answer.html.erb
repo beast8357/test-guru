@@ -1,8 +1,16 @@
 <tr class="text-center">
-  <td><%= answer.body %></td>
-  <td><%= link_to t('.show'), admin_test_question_answer_path(current_test, @question, answer), class: "btn btn-primary" %></td>
-  <td><%= link_to t('.edit'), edit_admin_test_question_answer_path(current_test, @question, answer), class: "btn btn-primary" %></td>
-  <td>
+  <td class="align-middle"><%= answer.body %></td>
+  <td class="align-middle">
+    <%= link_to t('.show'),
+                admin_test_question_answer_path(current_test, @question, answer),
+                class: "btn btn-primary" %>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('.edit'),
+                edit_admin_test_question_answer_path(current_test, @question, answer),
+                class: "btn btn-primary" %>
+  </td>
+  <td class="align-middle">
     <%= link_to t('.delete'),
               admin_test_question_answer_path(current_test, @question, answer),
               method: :delete,

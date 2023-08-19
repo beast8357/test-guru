@@ -4,6 +4,8 @@
               class: 'form-inline',
               html: { style: 'display: none' },
               data: { test_id: test.id } do |form| %>
-  <%= form.text_field :title, class: 'form-control' %>
-  <%= form.submit t('.submit'), class: 'btn btn-primary' %>
+  <div class="d-flex">
+    <%= form.text_field :title, class: 'form-control' %>
+    <%= form.submit t('.submit'), class: 'btn btn-primary mx-2' %>
+  </div>
 <% end %>
