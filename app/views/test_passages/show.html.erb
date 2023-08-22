@@ -18,6 +18,13 @@
 
     <tr>
       <th>
+        <%= content_tag :div,
+                        class: "progress-bar mb-1",
+                        data: { questions_count: @test_passage.test.questions.count,
+                                current_question_number: @test_passage.current_question.number } do %>
+            <div class="progress-bar-line"></div>
+        <% end %>
+
         <p><%= link_to icon('github', t('.create_gist')), gist_path, class: "btn btn-outline-dark mt-2", method: :post %></p>
         <h5 class="mb-2 d-block">
           <%= @test_passage.current_question.body %>
