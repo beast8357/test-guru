@@ -21,6 +21,8 @@ function formInlineHanlder(testId) {
   var $testTitle = $(`.test-title[data-test-id="${testId}"]`)
   var $formInline = $(`.form-inline[data-test-id="${testId}"]`)
 
+  if (!link) { return }
+
   $formInline.toggle()
   $testTitle.toggle()
 
