@@ -5,7 +5,11 @@
     <div class="nav-item">
       <% if user_signed_in?%>
         <span class="btn btn-dark disabled">
-          <%= t('.welcome', user_name: current_user.first_name) %>
+          <% if current_user.admin? %>
+            <%= t('.welcome', user_name: current_user.email) %>
+          <% else %>
+            <%= t('.welcome', user_name: current_user.first_name) %>
+          <% end %>
         </span>
         <% if current_user.admin?%>
         <button type="button" class="btn btn-dark">

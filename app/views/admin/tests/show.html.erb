@@ -14,9 +14,15 @@
       <%= t('.level') %>
       <%= test_level(@test) %>
     </h3>
+
+    <p>
+      <%= link_to t('.edit'),
+                edit_admin_test_path(@test),
+                class: "btn btn-primary" %>
+    </p>
   </table>
 
-  <div class="table-responsive mt-2">
+  <div class="table-responsive">
     <table class="table table-bordered border-dark">
       <tr>
         <th class="text-center"><%= t('.questions') %></th>

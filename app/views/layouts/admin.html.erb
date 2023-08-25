@@ -16,7 +16,7 @@
     <%= javascript_pack_tag 'application'%>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render 'admin/nav' %>
     
     <%= show_flash %>
@@ -24,5 +24,11 @@
     <%= yield %>
     
     <%= render 'shared/footer' %>
+
+    <script>
+      var translations = <%= raw(I18n.t('admin.tests.test',
+                                        locale: I18n.locale,
+                                        default: {}).to_json) %>
+    </script>
   </body>
 </html>

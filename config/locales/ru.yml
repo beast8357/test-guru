@@ -111,12 +111,14 @@ ru:
         show_gists: " Просмотр gist'ов"
       test:
         show: "Просмотр"
-        edit: "Редактирование"
+        edit: "Редактировать"
         delete: "Удалить"
+        cancel: "Отмена"
       show:
         category: "Категория: "
         title: "Название: "
         level: "Сложность: "
+        edit: "Расширенное редактирование"
         questions: "Вопросы "
         actions: "Действия"
         new_question: "Добавить вопрос"
@@ -125,11 +127,13 @@ ru:
         edit: "Редактирование теста"
         create: "Создание теста"
         back: "Назад"
+      form_inline:
+        submit: "ОК"
 
     questions:
       question:
         show: "Просмотр"
-        edit: "Редактирование"
+        edit: "Редактировать"
         delete: "Удалить"
       form:
         edit: "Редактирование вопроса"
@@ -149,7 +153,7 @@ ru:
     answers:
       answer:
         show: "Просмотр"
-        edit: "Редактирование"
+        edit: "Редактировать"
         delete: "Удалить"
       form:
         edit: "Редактирование ответа на вопрос: "

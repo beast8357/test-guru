@@ -113,10 +113,12 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+        cancel: "Cancel"
       show:
         category: "Category: "
         title: "Title: "
         level: "Difficulty: "
+        edit: "Enhanced editing"
         questions: "Questions"
         actions: "Actions"
         new_question: "New question"
@@ -125,6 +127,8 @@ en:
         edit: "Test editing"
         create: "Test creation"
         back: "Back"
+      form_inline:
+        submit: "OK"
 
     questions:
       question:

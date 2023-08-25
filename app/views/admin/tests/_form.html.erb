@@ -23,7 +23,9 @@
 
         <p><%= form.submit %></p>
 
-        <p><%= link_to t('.back'), admin_tests_path, class: "btn btn-primary" %></p>
+        <p>
+          <%= link_to t('.back'), admin_test_path(@test), class: "btn btn-primary" %>  
+        </p>
       <% end %>
     </div>
   </div>
