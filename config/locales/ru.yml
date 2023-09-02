@@ -82,6 +82,8 @@ ru:
       question_number: "Вопрос №%{number}"
       next: "Далее"
       create_gist: ' Создать gist'
+    update:
+      no_answer: "Необходимо выбрать вариант ответа!"
 
   services:
     gist_question_service:

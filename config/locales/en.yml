@@ -72,6 +72,8 @@ en:
       question_number: "Question №%{number}"
       next: "Next"
       create_gist: ' Create a gist'
+    update:
+      no_answer: "You need to select an answer!"
 
   tests:
     index:
