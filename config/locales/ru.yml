@@ -38,10 +38,11 @@ ru:
       log_in: "Войти в систему"
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
+      admin_panel: "Панель Администратора"
+    select_language:
       select: "Выбрать язык"
       en: "Английский"
       ru: "Русский"
-      admin_panel: "Панель Администратора"
     footer:
       current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"

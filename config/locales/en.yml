@@ -38,10 +38,11 @@ en:
       log_in: "Log In"
       sign_up: "Sign Up"
       welcome: "Welcome, %{user_name}"
+      admin_panel: "Admin Panel"
+    select_language:
       select: "Select language"
       en: "English"
       ru: "Russian"
-      admin_panel: "Admin Panel"
     footer:
       current_year: "Year: %{year}"
       author: "Author: Bulat Khairutdinov"
