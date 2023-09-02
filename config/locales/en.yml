@@ -71,7 +71,7 @@ en:
       questions_count: "Questions in total: %{count}"
       question_number: "Question №%{number}"
       next: "Next"
-      create_gist: ' Create a gist'
+      create_gist: " Create a gist"
     update:
       no_answer: "You need to select an answer!"
 

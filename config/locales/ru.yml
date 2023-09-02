@@ -81,7 +81,7 @@ ru:
       questions_count: "Всего вопросов: %{count}"
       question_number: "Вопрос №%{number}"
       next: "Далее"
-      create_gist: ' Создать gist'
+      create_gist: " Создать gist"
     update:
       no_answer: "Необходимо выбрать вариант ответа!"
 
