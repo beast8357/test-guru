@@ -11,6 +11,7 @@ ru:
         title: "Название"
         category: "Категория"
         level: "Сложность"
+        active: "Активный"
       question:
         body: "Вопрос"
       answer:

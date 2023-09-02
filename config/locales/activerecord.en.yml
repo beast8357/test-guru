@@ -11,6 +11,7 @@ en:
         title: "Title"
         category: "Category"
         level: "Difficulty"
+        active: "Active"
       question:
         body: "Question"
       answer:

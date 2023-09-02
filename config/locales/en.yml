@@ -121,6 +121,7 @@ en:
         category: "Category: "
         title: "Title: "
         level: "Difficulty: "
+        active: "Active: "
         edit: "Enhanced editing"
         questions: "Questions"
         actions: "Actions"
