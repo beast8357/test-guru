@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_20_151539) do
+ActiveRecord::Schema.define(version: 2023_09_02_083059) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -25,6 +28,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_151539) do
     t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_categories_on_title"
   end
 
   create_table "gists", force: :cascade do |t|
@@ -34,6 +38,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_151539) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_gists_on_question_id"
+    t.index ["url"], name: "index_gists_on_url"
     t.index ["user_id"], name: "index_gists_on_user_id"
   end
 
@@ -52,6 +57,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_151539) do
     t.integer "correct_questions", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["correct_questions"], name: "index_test_passages_on_correct_questions"
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
@@ -66,6 +72,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_151539) do
     t.integer "creator_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["creator_id"], name: "index_tests_on_creator_id"
+    t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -89,6 +96,7 @@ ActiveRecord::Schema.define(version: 2023_07_20_151539) do
     t.string "first_name"
     t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["type"], name: "index_users_on_type"
   end
