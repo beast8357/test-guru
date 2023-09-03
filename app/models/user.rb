@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :rememberable,
          :validatable
 
-  has_many :test_passages
+  has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: "Test", foreign_key: "creator_id"
   has_many :gists
