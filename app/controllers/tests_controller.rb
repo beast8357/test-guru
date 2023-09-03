@@ -3,7 +3,7 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[start]
 
   def index
-    @tests = current_user.admin? ? Test.all : Test.ready
+    @tests = Test.ready
   end
 
   def start
