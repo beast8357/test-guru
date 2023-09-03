@@ -82,6 +82,7 @@ en:
       level: "Difficulty"
       questions: "Questions"
       action: "Action"
+      no_tests: "There are no available tests yet"
     test:
       start: "Start"
 
