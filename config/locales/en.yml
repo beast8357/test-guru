@@ -46,8 +46,9 @@ en:
     footer:
       current_year: "Year: %{year}"
       author: "Author: Bulat Khairutdinov"
-      description: "This project allows you to take tests on various topics"
-      school_url: "Educational project at the online school Thinknetica"
+      description: "A project for passing tests on various topics"
+      school_url: "Course"
+      feedback: "Feedback"
 
   controllers:
     admin:

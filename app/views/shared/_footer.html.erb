@@ -1,9 +1,16 @@
 <footer class="footer py-3 bg-light">
-  <p class="text-center">
-    <%= current_year %> |
-    <%= t('.author') %> |
-    <%= github_url('beast8357', 'test-guru') %><br>
-    <%= t('.description') %><br>
-    <%= school_url %>
-  </p>
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>
+      <p>
+        <%= current_year %> |
+        <%= t('.author') %> |
+        <%= github_url('beast8357', 'test-guru') %> <br>
+        <%= t('.description') %> |
+        <%= school_url %>
+      </p>
+    </div>
+    <div class="text-right">
+      <%= link_to t('.feedback') %>
+    </div>
+  </div>
 </footer>

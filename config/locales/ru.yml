@@ -46,8 +46,9 @@ ru:
     footer:
       current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"
-      description: "Данный проект предоставляет возможность проходить тесты по различным темам"
-      school_url: "Учебный проект в онлайн-школе Thinknetica"
+      description: "Проект для прохождения тестов по различным темам"
+      school_url: "Курс"
+      feedback: "Обратная связь"
 
   controllers:
     admin:
