@@ -8,6 +8,7 @@ class FeedbacksController < ApplicationController
     @feedback = current_user.feedbacks.new(feedback_params)
 
     if @feedback.save
+      flash[:notice] = t('controllers.feedbacks.success')
       redirect_to root_path
     else
       render :new

@@ -60,6 +60,8 @@ ru:
     users:
       sessions:
         hello: "Привет, %{user_name}!"
+    feedbacks:
+      success: "Вы успешно оставили отзыв!"
 
   tests:
     index:
