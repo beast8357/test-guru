@@ -12,6 +12,8 @@ en:
       answer:
         create: "Create"
         update: "Save changes"
+      feedback:
+        create: "Leave feedback"
     label:
       test:
         title: "Title"
@@ -27,6 +29,9 @@ en:
         title: "Enter the title"
       question:
         body: "Enter text"
+      feedback:
+        title: "Enter a topic name"
+        body: "Enter the text"
 
   tests_mailer:
     completed_test:
@@ -96,6 +101,11 @@ en:
   gists:
     success: "Gist was succesfully created: %{url}"
     failure: "An error occured while saving gist."
+
+  feedbacks:
+    form:
+      header: "Feedback form"
+      back: "Back"
 
   admin:
     nav:

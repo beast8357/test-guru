@@ -5,6 +5,7 @@ ru:
       question: "Вопрос"
       answer: "Ответ"
       test_passage: "Прохождение теста"
+      feedback: "Обратная связь"
 
     attributes:
       test:
@@ -19,6 +20,9 @@ ru:
         correct: "Правильность"
       test_passage:
         correct_questions: "Правильные ответы"
+      feedback:
+        title: "Тема"
+        body: "Обратная связь"
     errors:
       messages:
         blank: "не может быть пустым"

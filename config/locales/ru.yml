@@ -12,6 +12,8 @@ ru:
       answer:
         create: "Создать"
         update: "Сохранить изменения"
+      feedback:
+        create: "Оставить отзыв"
     label:
       test:
         title: "Название"
@@ -26,6 +28,9 @@ ru:
       test:
         title: "Введите название"
       question:
+        body: "Введите текст"
+      feedback:
+        title: "Введите название темы"
         body: "Введите текст"
 
   tests_mailer:
@@ -96,6 +101,11 @@ ru:
   gists:
     success: "Gist успешно сохранен: %{url}"
     failure: "Во время сохранения gist произошла ошибка."
+
+  feedbacks:
+    form:
+      header: "Форма обратной связи"
+      back: "Назад"
 
   admin:
     nav:

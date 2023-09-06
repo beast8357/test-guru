@@ -5,6 +5,7 @@ en:
       question: "Question"
       answer: "Answer"
       test_passage: "Test Passage"
+      feedback: "Feedback"
 
     attributes:
       test:
@@ -19,6 +20,9 @@ en:
         correct: "Correct"
       test_passage:
         correct_questions: "Correct questions"
+      feedback:
+        title: "Topic"
+        body: "Feedback"
     errors:
       messages:
         blank: "can't be blank"
