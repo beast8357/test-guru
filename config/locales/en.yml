@@ -36,6 +36,13 @@ en:
   tests_mailer:
     completed_test:
       subject: "You completed the TestGuru test"
+  feedbacks_mailer:
+    feedback_message:
+      subject: "Feedback of TestGuru"
+      new: "New feedback!"
+      from_user: "From user: "
+      topic: "Topic: "
+      content: "Content:"
 
   shared:
     header:

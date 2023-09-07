@@ -36,6 +36,13 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы прошли тест на TestGuru"
+  feedbacks_mailer:
+    feedback_message:
+      subject: "Отзыв о TestGuru"
+      new: "Новый отзыв!"
+      from_user: "От пользователя: "
+      topic: "Тема: "
+      content: "Содержание:"
 
   shared:
     header:
