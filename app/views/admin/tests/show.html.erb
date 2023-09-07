@@ -1,19 +1,24 @@
 <div class="container mt-3">
   <table>
-    <h3>
+    <h5>
       <%= t('.category') %>
       <%= @test.category.title %>
-    </h3>
+    </h5>
 
-    <h3>
+    <h5>
       <%= t('.title') %>
       <%= @test.title %>
-    </h3>
+    </h5>
 
-    <h3>
+    <h5>
       <%= t('.level') %>
       <%= test_level(@test) %>
-    </h3>
+    </h5>
+
+    <h5>
+      <%= t('.active') %>
+      <%= @test.active %>
+    </h5>
 
     <p>
       <%= link_to t('.edit'),

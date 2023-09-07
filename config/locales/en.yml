@@ -12,6 +12,8 @@ en:
       answer:
         create: "Create"
         update: "Save changes"
+      feedback:
+        create: "Leave feedback"
     label:
       test:
         title: "Title"
@@ -27,10 +29,20 @@ en:
         title: "Enter the title"
       question:
         body: "Enter text"
+      feedback:
+        title: "Enter a topic name"
+        body: "Enter the text"
 
   tests_mailer:
     completed_test:
       subject: "You completed the TestGuru test"
+  feedbacks_mailer:
+    feedback_message:
+      subject: "Feedback of TestGuru"
+      new: "New feedback!"
+      from_user: "From user: "
+      topic: "Topic: "
+      content: "Content:"
 
   shared:
     header:
@@ -38,15 +50,17 @@ en:
       log_in: "Log In"
       sign_up: "Sign Up"
       welcome: "Welcome, %{user_name}"
+      admin_panel: "Admin Panel"
+    select_language:
       select: "Select language"
       en: "English"
       ru: "Russian"
-      admin_panel: "Admin Panel"
     footer:
       current_year: "Year: %{year}"
       author: "Author: Bulat Khairutdinov"
-      description: "This project allows you to take tests on various topics"
-      school_url: "Educational project at the online school Thinknetica"
+      description: "A project for passing tests on various topics"
+      school_url: "Course"
+      feedback: "Feedback"
 
   controllers:
     admin:
@@ -58,6 +72,8 @@ en:
     users:
       sessions:
         hello: "Hello, %{user_name}!"
+    feedbacks:
+      success: "You've successfully left a feedback!"
 
   test_passages:
     result:
@@ -70,7 +86,9 @@ en:
       questions_count: "Questions in total: %{count}"
       question_number: "Question №%{number}"
       next: "Next"
-      create_gist: ' Create a gist'
+      create_gist: " Create a gist"
+    update:
+      no_answer: "You need to select an answer!"
 
   tests:
     index:
@@ -79,6 +97,7 @@ en:
       level: "Difficulty"
       questions: "Questions"
       action: "Action"
+      no_tests: "There are no tests available yet"
     test:
       start: "Start"
 
@@ -89,6 +108,11 @@ en:
   gists:
     success: "Gist was succesfully created: %{url}"
     failure: "An error occured while saving gist."
+
+  feedbacks:
+    form:
+      header: "Feedback form"
+      back: "Back"
 
   admin:
     nav:
@@ -118,6 +142,7 @@ en:
         category: "Category: "
         title: "Title: "
         level: "Difficulty: "
+        active: "Active: "
         edit: "Enhanced editing"
         questions: "Questions"
         actions: "Actions"

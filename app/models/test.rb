@@ -15,5 +15,6 @@ class Test < ApplicationRecord
   scope :easy, -> { by_level(1) }
   scope :medium, -> { by_level(2) }
   scope :hard, -> { by_level(3) }
+  scope :ready, -> { where("questions_count > ?", 0).where(active: true) }
   
 end

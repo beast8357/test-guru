@@ -11,7 +11,7 @@
           <%= form.text_area :body, placeholder: true, rows: 7, cols: 60 %>
         </p>
 
-        <p><%= form.submit %></p>
+        <p><%= form.submit class: "btn btn-primary" %></p>
       <% end %>
 
       <%= link_to t('.to_tests'), admin_tests_path, class: "btn btn-primary" %>

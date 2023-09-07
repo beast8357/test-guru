@@ -19,7 +19,7 @@
           <%= form.check_box :correct, id: :answer_correct %>
         </p>
 
-        <p><%= form.submit %></p>
+        <p><%= form.submit class: "btn btn-primary" %></p>
       <% end %>
 
       <%= link_to t('.to_tests'), admin_tests_path, class: "btn btn-primary" %>

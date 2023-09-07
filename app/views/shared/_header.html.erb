@@ -18,21 +18,7 @@
         </button>
         <% end %>
 
-        <span class="nav-item dropdown">
-          <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <%= t('.select') %>
-          </button>
-
-          <ul class="dropdown-menu">
-            <li><button class="dropdown-item" type="button">
-              <%= link_to t('.en'), select_language(:en), class: "nav-link active" %>
-            </button></li>
-
-            <li><button class="dropdown-item" type="button">
-              <%= link_to t('.ru'), select_language(:ru), class: "nav-link active" %>
-            </button></li>
-          </ul>
-        </span>
+        <%= render 'shared/select_language' %>
 
         <button type="button" class="btn btn-dark">
           <%= link_to t('.log_out'), destroy_user_session_path,
@@ -40,6 +26,8 @@
                                      class: "nav-link active" %>
         </button>
       <% else %>
+        <%= render 'shared/select_language' %>
+
         <button type="button" class="btn btn-dark">
           <%= link_to t('.log_in'), new_user_session_path,
                                     class: "nav-link active" %>

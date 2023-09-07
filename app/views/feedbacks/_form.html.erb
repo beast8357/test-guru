@@ -1,0 +1,29 @@
+<div class="container mt-5 mb-3">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <h2><%= t('.header') %></h2>
+
+      <%= form_with model: feedback, class: "form-group" do |form| %>
+        <%= render 'shared/errors', resource: feedback %>
+
+        <p>
+          <%= form.label :title %>
+          <%= form.text_field :title, id: :feedback_title, class: "form-control", placeholder: true %>
+        </p>
+
+        <p>
+          <%= form.label :body %>
+          <%= form.text_area :body, id: :feedback_body, class: "form-control", placeholder: true, rows: 7, cols: 60 %>
+        </p>
+
+        <p>
+          <%= form.submit class: "btn btn-dark" %>
+        </p>
+
+        <p>
+          <%= link_to t('.back'), root_path, class: "btn btn-dark" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,8 @@
 <tr class="text-center">
-  <td><%= test.title %></td>
-  <td><%= test_level(test) %></td>
-  <td><%= test.questions.count %></td>
-  <td>
+  <td class="align-middle"><%= test.title %></td>
+  <td class="align-middle"><%= test_level(test) %></td>
+  <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle">
     <div>
       <%= button_to t('.start'), start_test_path(test), class: "btn btn-dark" %>
     </div>

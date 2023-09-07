@@ -12,6 +12,8 @@ ru:
       answer:
         create: "Создать"
         update: "Сохранить изменения"
+      feedback:
+        create: "Оставить отзыв"
     label:
       test:
         title: "Название"
@@ -27,10 +29,20 @@ ru:
         title: "Введите название"
       question:
         body: "Введите текст"
+      feedback:
+        title: "Введите название темы"
+        body: "Введите текст"
 
   tests_mailer:
     completed_test:
       subject: "Вы прошли тест на TestGuru"
+  feedbacks_mailer:
+    feedback_message:
+      subject: "Отзыв о TestGuru"
+      new: "Новый отзыв!"
+      from_user: "От пользователя: "
+      topic: "Тема: "
+      content: "Содержание:"
 
   shared:
     header:
@@ -38,15 +50,17 @@ ru:
       log_in: "Войти в систему"
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
+      admin_panel: "Панель Администратора"
+    select_language:
       select: "Выбрать язык"
       en: "Английский"
       ru: "Русский"
-      admin_panel: "Панель Администратора"
     footer:
       current_year: "Год: %{year}"
       author: "Автор: Булат Хайрутдинов"
-      description: "Данный проект предоставляет возможность проходить тесты по различным темам"
-      school_url: "Учебный проект в онлайн-школе Thinknetica"
+      description: "Проект для прохождения тестов по различным темам"
+      school_url: "Курс"
+      feedback: "Обратная связь"
 
   controllers:
     admin:
@@ -58,6 +72,8 @@ ru:
     users:
       sessions:
         hello: "Привет, %{user_name}!"
+    feedbacks:
+      success: "Вы успешно оставили отзыв!"
 
   tests:
     index:
@@ -66,6 +82,7 @@ ru:
       level: "Сложность"
       questions: "Кол-во вопросов"
       action: "Действие"
+      no_tests: "Здесь пока нет доступных тестов"
     test:
       start: "Старт"
 
@@ -80,7 +97,9 @@ ru:
       questions_count: "Всего вопросов: %{count}"
       question_number: "Вопрос №%{number}"
       next: "Далее"
-      create_gist: ' Создать gist'
+      create_gist: " Создать gist"
+    update:
+      no_answer: "Необходимо выбрать вариант ответа!"
 
   services:
     gist_question_service:
@@ -89,6 +108,11 @@ ru:
   gists:
     success: "Gist успешно сохранен: %{url}"
     failure: "Во время сохранения gist произошла ошибка."
+
+  feedbacks:
+    form:
+      header: "Форма обратной связи"
+      back: "Назад"
 
   admin:
     nav:
@@ -118,6 +142,7 @@ ru:
         category: "Категория: "
         title: "Название: "
         level: "Сложность: "
+        active: "Активный: "
         edit: "Расширенное редактирование"
         questions: "Вопросы "
         actions: "Действия"
