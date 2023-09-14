@@ -1,8 +1,9 @@
 class CreateBadges < ActiveRecord::Migration[6.1]
   def change
     create_table :badges do |t|
-      t.string :name, null: false, default: ""
-      t.string :image_filename, null: false, default: ""
+      t.string :name, null: false, default: "", unique: true
+      t.string :image_name, null: false, default: "", unique: true
+      t.string :criterion, null: false, default: "", unique: true
 
       t.timestamps
     end
