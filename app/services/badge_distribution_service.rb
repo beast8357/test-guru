@@ -7,6 +7,10 @@ class BadgeDistributionService
       { name: "First Test",
         image_name: "first_test.png",
         description: "This badge is given to you once you pass your first test" },
+    user_passed_the_test_flawlessly:
+      { name: "Flawless Test",
+        image_name: "flawless_test.png",
+        description: "You answered all the test questions correctly" },
   }.freeze
 
   ACHIEVEMENTS = {
@@ -16,6 +20,9 @@ class BadgeDistributionService
       else
         false
       end
+    end,
+    user_passed_the_test_flawlessly: ->(context) do
+      context.test_passage.correct_answers_percentage == 100 ? true : false
     end,
   }.freeze
 
