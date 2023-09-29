@@ -6,7 +6,6 @@ class BadgeDistributionService
     user_passed_their_first_test:
       { name: "First Test",
         image_name: "first_test.png",
-        criterion: "Pass your first test",
         description: "This badge is given to you once you pass your first test" },
   }.freeze
 
