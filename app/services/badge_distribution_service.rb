@@ -11,6 +11,10 @@ class BadgeDistributionService
       { name: "Flawless Test",
         image_name: "flawless_test.png",
         description: "You answered all the test questions correctly" },
+    user_totally_failed_the_test:
+      { name: "Epic Fail",
+        image_name: "epic_fail.png",
+        description: "You answered all the test questions incorrectly" },
   }.freeze
 
   ACHIEVEMENTS = {
@@ -23,6 +27,9 @@ class BadgeDistributionService
     end,
     user_passed_the_test_flawlessly: ->(context) do
       context.test_passage.correct_answers_percentage == 100 ? true : false
+    end,
+    user_totally_failed_the_test: ->(context) do
+      context.test_passage.correct_questions == 0 ? true : false
     end,
   }.freeze
 
