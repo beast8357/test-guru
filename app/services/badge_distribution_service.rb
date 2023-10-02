@@ -31,6 +31,18 @@ class BadgeDistributionService
       { name: "Gaming Guru",
         image_name: "gaming_guru.png",
         description: "You have successfully passed all the tests from the 'Gaming' category" },
+    user_successfully_passed_all_tests_lvl_easy:
+      { name: "Easy Peasy",
+        image_name: "easy_peasy.png",
+        description: "You have successfully passed all the tests with level 'Easy'" },
+    user_successfully_passed_all_tests_lvl_medium:
+      { name: "Medium Rare",
+        image_name: "medium_rare.png",
+        description: "You have successfully passed all the tests with level 'Medium'" },
+    user_successfully_passed_all_tests_lvl_hard:
+      { name: "Die Hard",
+        image_name: "die_hard.png",
+        description: "You have successfully passed all the tests with level 'Hard'" },
   }.freeze
 
   ACHIEVEMENTS = {
@@ -71,13 +83,23 @@ class BadgeDistributionService
                   context.user.tests.by_category("Gaming"),
                   Test.by_category("Gaming"))
     end,
+    user_successfully_passed_all_tests_lvl_easy: ->(context) do
+      passed_all?(context, context.user.tests.easy, Test.easy)
+    end,
+    user_successfully_passed_all_tests_lvl_medium: ->(context) do
+      passed_all?(context, context.user.tests.medium, Test.medium)
+    end,
+    user_successfully_passed_all_tests_lvl_hard: ->(context) do
+      passed_all?(context, context.user.tests.hard, Test.hard)
+    end,
   }.freeze
 
-  attr_reader :test_passage, :user, :badges
+  attr_reader :test_passage, :user, :test, :badges
 
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
+    @test = test_passage.test
     @badges = []
   end
 
