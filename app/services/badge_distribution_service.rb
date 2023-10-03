@@ -69,28 +69,34 @@ class BadgeDistributionService
       end
     end,
     user_successfully_passed_all_tests_on_programming: ->(context) do
-      passed_all?(context,
-                  context.user.tests.by_category("Programming"),
-                  Test.by_category("Programming"))
+      return if user_has_badge_with_name?(context, "Programming Guru")
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.by_category("Programming"),
+                               Test.by_category("Programming"))
     end,
     user_successfully_passed_all_tests_on_music_mixing: ->(context) do
-      passed_all?(context,
-                  context.user.tests.by_category("Music Mixing"),
-                  Test.by_category("Music Mixing"))
+      return if user_has_badge_with_name?(context, "Music Mixing")
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.by_category("Music Mixing"),
+                               Test.by_category("Music Mixing"))
     end,
     user_successfully_passed_all_tests_on_gaming: ->(context) do
-      passed_all?(context,
-                  context.user.tests.by_category("Gaming"),
-                  Test.by_category("Gaming"))
+      return if user_has_badge_with_name?(context, "Gaming")
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.by_category("Gaming"),
+                               Test.by_category("Gaming"))
     end,
     user_successfully_passed_all_tests_lvl_easy: ->(context) do
-      passed_all?(context, context.user.tests.easy, Test.easy)
+      return if user_has_badge_with_name?(context, "Easy Peasy")
+      successfully_passed_all?(context.test_passage, context.user.tests.easy, Test.easy)
     end,
     user_successfully_passed_all_tests_lvl_medium: ->(context) do
-      passed_all?(context, context.user.tests.medium, Test.medium)
+      return if user_has_badge_with_name?(context, "Medium Rare")
+      successfully_passed_all?(context.test_passage, context.user.tests.medium, Test.medium)
     end,
     user_successfully_passed_all_tests_lvl_hard: ->(context) do
-      passed_all?(context, context.user.tests.hard, Test.hard)
+      return if user_has_badge_with_name?(context, "Die Hard")
+      successfully_passed_all?(context.test_passage, context.user.tests.hard, Test.hard)
     end,
   }.freeze
 
@@ -118,10 +124,19 @@ class BadgeDistributionService
     end
   end
 
-  def self.passed_all?(context, user_tests, reference_tests)
-    box = []
-    user_tests.each { |test| box << test unless box.include?(test) }
-    box == reference_tests ? true : false
+  class << self
+    def successfully_passed_all?(test_passage, user_tests, reference_tests)
+      box = []
+      user_tests.each do |test|
+        box << test if !box.include?(test) && test_passage.successful?
+      end
+
+      box == reference_tests ? true : false
+    end
+
+    def user_has_badge_with_name?(context, name)
+      !context.user.badges.find_by_name(name).nil?
+    end
   end
 
 end
