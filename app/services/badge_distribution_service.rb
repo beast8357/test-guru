@@ -127,29 +127,25 @@ class BadgeDistributionService
     end,
   }.freeze
 
-  attr_reader :test_passage, :user, :test, :badges
+  attr_reader :test_passage, :user, :test
 
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
     @test = test_passage.test
-    @badges = []
   end
 
   def give_badges
-    self.check_achievements
-    badges.each { |badge| user.badges << badge if badge.save! }
-  end
-
-  private
-
-  def check_achievements
-    ACHIEVEMENTS.keys.each do |key|
-      if ACHIEVEMENTS.fetch(key).call(self) == true
-        badges << Badge.new(BADGE_PARAMS.fetch(key))
+    badge = nil
+    ACHIEVEMENTS.keys.each do |achievement|
+      if ACHIEVEMENTS.fetch(achievement).call(self) == true
+        badge = Badge.new(BADGE_PARAMS.fetch(achievement))
+        user.badges << badge if badge.save!
       end
     end
   end
+
+  private
 
   class << self
     def successfully_passed_all?(test_passage, user_tests, reference_tests)
