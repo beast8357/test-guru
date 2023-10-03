@@ -69,37 +69,58 @@ class BadgeDistributionService
       end
     end,
     user_successfully_passed_all_tests_on_programming: ->(context) do
-      return if user_has_badge_with_name?(context, "Programming Guru")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_on_programming).fetch(:name)
+        )
+      category = Category.find_by_title("Programming").title
       successfully_passed_all?(context.test_passage,
-                               context.user.tests.by_category("Programming"),
-                               Test.by_category("Programming").ready)
+                               context.user.tests.by_category(category),
+                               Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_on_music_mixing: ->(context) do
-      return if user_has_badge_with_name?(context, "Music Mixing")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_on_music_mixing).fetch(:name)
+        )
+      category = Category.find_by_title("Music Mixing").title
       successfully_passed_all?(context.test_passage,
-                               context.user.tests.by_category("Music Mixing"),
-                               Test.by_category("Music Mixing").ready)
+                               context.user.tests.by_category(category),
+                               Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_on_gaming: ->(context) do
-      return if user_has_badge_with_name?(context, "Gaming Guru")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_on_gaming).fetch(:name)
+        )
+      category = Category.find_by_title("Gaming").title
       successfully_passed_all?(context.test_passage,
-                               context.user.tests.by_category("Gaming"),
-                               Test.by_category("Gaming").ready)
+                               context.user.tests.by_category(category),
+                               Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_lvl_easy: ->(context) do
-      return if user_has_badge_with_name?(context, "Easy Peasy")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_lvl_easy).fetch(:name)
+        )
       successfully_passed_all?(context.test_passage,
                                context.user.tests.easy,
                                Test.easy.ready)
     end,
     user_successfully_passed_all_tests_lvl_medium: ->(context) do
-      return if user_has_badge_with_name?(context, "Medium Rare")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_lvl_medium).fetch(:name)
+        )
       successfully_passed_all?(context.test_passage,
                                context.user.tests.medium,
                                Test.medium.ready)
     end,
     user_successfully_passed_all_tests_lvl_hard: ->(context) do
-      return if user_has_badge_with_name?(context, "Die Hard")
+      return if user_has_badge_with_name?(
+          context,
+          BADGE_PARAMS.fetch(:user_successfully_passed_all_tests_lvl_hard).fetch(:name)
+        )
       successfully_passed_all?(context.test_passage,
                                context.user.tests.hard,
                                Test.hard.ready)
