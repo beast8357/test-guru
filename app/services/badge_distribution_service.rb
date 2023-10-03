@@ -72,31 +72,37 @@ class BadgeDistributionService
       return if user_has_badge_with_name?(context, "Programming Guru")
       successfully_passed_all?(context.test_passage,
                                context.user.tests.by_category("Programming"),
-                               Test.by_category("Programming"))
+                               Test.by_category("Programming").ready)
     end,
     user_successfully_passed_all_tests_on_music_mixing: ->(context) do
       return if user_has_badge_with_name?(context, "Music Mixing")
       successfully_passed_all?(context.test_passage,
                                context.user.tests.by_category("Music Mixing"),
-                               Test.by_category("Music Mixing"))
+                               Test.by_category("Music Mixing").ready)
     end,
     user_successfully_passed_all_tests_on_gaming: ->(context) do
-      return if user_has_badge_with_name?(context, "Gaming")
+      return if user_has_badge_with_name?(context, "Gaming Guru")
       successfully_passed_all?(context.test_passage,
                                context.user.tests.by_category("Gaming"),
-                               Test.by_category("Gaming"))
+                               Test.by_category("Gaming").ready)
     end,
     user_successfully_passed_all_tests_lvl_easy: ->(context) do
       return if user_has_badge_with_name?(context, "Easy Peasy")
-      successfully_passed_all?(context.test_passage, context.user.tests.easy, Test.easy)
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.easy,
+                               Test.easy.ready)
     end,
     user_successfully_passed_all_tests_lvl_medium: ->(context) do
       return if user_has_badge_with_name?(context, "Medium Rare")
-      successfully_passed_all?(context.test_passage, context.user.tests.medium, Test.medium)
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.medium,
+                               Test.medium.ready)
     end,
     user_successfully_passed_all_tests_lvl_hard: ->(context) do
       return if user_has_badge_with_name?(context, "Die Hard")
-      successfully_passed_all?(context.test_passage, context.user.tests.hard, Test.hard)
+      successfully_passed_all?(context.test_passage,
+                               context.user.tests.hard,
+                               Test.hard.ready)
     end,
   }.freeze
 
