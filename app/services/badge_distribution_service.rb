@@ -45,7 +45,7 @@ class BadgeDistributionService
         description: "You have successfully passed all the tests with level 'Hard'" },
   }.freeze
 
-  ACHIEVEMENTS = {
+  CRITERIA_CHECK = {
     user_passed_their_first_test: ->(context) do
       if context.user.test_passages.one?
         context.user.test_passages.last.completed?
@@ -60,7 +60,7 @@ class BadgeDistributionService
       context.test_passage.correct_questions == 0 ? true : false
     end,
     user_passed_the_test_flawlessly_on_the_first_attempt: ->(context) do
-      if ACHIEVEMENTS.fetch(:user_passed_the_test_flawlessly).call(context) == true
+      if CRITERIA_CHECK.fetch(:user_passed_the_test_flawlessly).call(context) == true
         box = []
         context.user.tests.each { |test| box << test.id if test.id == context.test.id }
         box.one?
@@ -137,9 +137,9 @@ class BadgeDistributionService
 
   def give_badges
     badge = nil
-    ACHIEVEMENTS.keys.each do |achievement|
-      if ACHIEVEMENTS.fetch(achievement).call(self) == true
-        badge = Badge.new(BADGE_PARAMS.fetch(achievement))
+    CRITERIA_CHECK.keys.each do |criterion|
+      if CRITERIA_CHECK.fetch(criterion).call(self) == true
+        badge = Badge.new(BADGE_PARAMS.fetch(criterion))
         user.badges << badge if badge.save!
       end
     end
