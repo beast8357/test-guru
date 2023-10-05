@@ -26,7 +26,7 @@ class BadgeDistributionService
       end
     end,
     user_successfully_passed_all_tests_on_programming: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_on_programming).fetch(:name)
         )
@@ -36,7 +36,7 @@ class BadgeDistributionService
                                                      Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_on_music_mixing: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_on_music_mixing).fetch(:name)
         )
@@ -46,7 +46,7 @@ class BadgeDistributionService
                                                      Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_on_gaming: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_on_gaming).fetch(:name)
         )
@@ -56,7 +56,7 @@ class BadgeDistributionService
                                                      Test.by_category(category).ready)
     end,
     user_successfully_passed_all_tests_lvl_easy: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_lvl_easy).fetch(:name)
         )
@@ -65,7 +65,7 @@ class BadgeDistributionService
                                                      Test.easy.ready)
     end,
     user_successfully_passed_all_tests_lvl_medium: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_lvl_medium).fetch(:name)
         )
@@ -74,7 +74,7 @@ class BadgeDistributionService
                                                      Test.medium.ready)
     end,
     user_successfully_passed_all_tests_lvl_hard: ->(context) do
-      return if user_has_badge_with_name?(
+      return if UserBadgeCheckService.new.user_has_badge_with_name?(
           context,
           context.badge_params.fetch(:user_successfully_passed_all_tests_lvl_hard).fetch(:name)
         )
@@ -100,15 +100,6 @@ class BadgeDistributionService
         badge = Badge.new(badge_params.fetch(criterion))
         user.badges << badge if badge.save!
       end
-    end
-  end
-
-  private
-
-  class << self
-
-    def user_has_badge_with_name?(context, name)
-      !context.user.badges.find_by_name(name).nil?
     end
   end
 
