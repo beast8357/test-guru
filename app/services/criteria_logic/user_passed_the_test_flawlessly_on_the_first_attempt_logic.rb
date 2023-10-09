@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UserPassedTheTestFlawlesslyOnTheFirstAttempLogic
-
   def yes?(context, hash)
     if hash.fetch(:user_passed_the_test_flawlessly).call(context) == true
       box = []
@@ -11,5 +10,4 @@ class UserPassedTheTestFlawlesslyOnTheFirstAttempLogic
       false
     end
   end
-
 end

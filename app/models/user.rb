@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   devise :database_authenticatable,
          :registerable,
          :confirmable,
@@ -31,5 +30,4 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
-  
 end

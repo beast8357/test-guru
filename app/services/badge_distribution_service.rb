@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class BadgeDistributionService
-
   attr_reader :test_passage, :user, :test, :badge_params, :criteria_check
 
   def initialize(test_passage)
@@ -22,5 +21,4 @@ class BadgeDistributionService
       end
     end
   end
-
 end

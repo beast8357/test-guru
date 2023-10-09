@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class TestsSuccessCheckService
-
   def tests_successful?(test_passage, user_tests, reference_tests)
     box = []
     user_tests.each do |test|
@@ -10,5 +9,4 @@ class TestsSuccessCheckService
 
     box == reference_tests ? true : false
   end
-
 end

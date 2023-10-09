@@ -1,11 +1,10 @@
+# frozen_string_literal: true
+
 folder_path = File.expand_path('criteria_logic', __dir__)
 ruby_files = Dir[File.join(folder_path, '*.rb')]
 ruby_files.each { |file| require_relative File.join('criteria_logic', File.basename(file, '.rb')) }
 
-# frozen_string_literal: true
-
 class CriteriaCheckService
-
   CRITERIA_CHECK = {
     user_passed_their_first_test: ->(context) do
       UserPassedTheirFirstTestLogic.new.yes?(context)
@@ -38,5 +37,4 @@ class CriteriaCheckService
       UserSuccessfullyPassedAllTestsOnLevelHardLogic.new.yes?(context)
     end,
   }.freeze
-
 end

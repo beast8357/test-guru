@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UserSuccessfullyPassedAllTestsOnLevelEasyLogic
-
   def yes?(context)
     return if UserBadgeCheckService.new.user_has_badge_with_name?(
         context,
@@ -11,5 +10,4 @@ class UserSuccessfullyPassedAllTestsOnLevelEasyLogic
                                                    context.user.tests.easy,
                                                    Test.easy.ready)
   end
-
 end

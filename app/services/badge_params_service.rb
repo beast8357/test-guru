@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class BadgeParamsService
-
   BADGE_PARAMS = {
     user_passed_their_first_test:
       { name: "First Test",
@@ -44,5 +43,4 @@ class BadgeParamsService
         image_name: "die_hard.png",
         description: "You have successfully passed all the tests with level 'Hard'" },
   }.freeze
-
 end
