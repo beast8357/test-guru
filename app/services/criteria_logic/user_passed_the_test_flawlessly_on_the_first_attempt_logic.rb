@@ -3,7 +3,7 @@
 class UserPassedTheTestFlawlesslyOnTheFirstAttempLogic
   class << self
     def suitable?(context, hash)
-      if hash.fetch(:user_passed_the_test_flawlessly).call(context) == true
+      if hash.fetch(:user_passed_the_test_flawlessly).call(context)
         box = []
         context.user.tests.each { |test| box << test.id if test.id == context.test.id }
         box.one?

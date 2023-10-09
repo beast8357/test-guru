@@ -15,7 +15,7 @@ class BadgeDistributionService
     badge = nil
     criteria = criteria_check.keys
     criteria.each do |criterion|
-      if criteria_check.fetch(criterion).call(self) == true
+      if criteria_check.fetch(criterion).call(self)
         badge = Badge.new(badge_params.fetch(criterion))
         user.badges << badge if badge.save!
       end

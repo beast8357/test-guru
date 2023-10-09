@@ -3,7 +3,7 @@
 class UserPassedTheTestFlawlesslyLogic
   class << self
     def suitable?(context)
-      context.test_passage.correct_answers_percentage == 100 ? true : false
+      context.test_passage.correct_answers_percentage == 100
     end
   end
 end
