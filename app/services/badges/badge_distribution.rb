@@ -10,7 +10,7 @@ module Badges
       @test = test_passage.test
     end
 
-    def give_badges
+    def call
       criteria = Badges::Constants::CriteriaCheck::CRITERIA_CHECK
       params = Badges::Constants::BadgeParams::BADGE_PARAMS
       criteria.keys.each do |criterion|
