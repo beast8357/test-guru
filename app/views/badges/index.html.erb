@@ -1,0 +1,9 @@
+<div class="container">
+  <% if @badges.any? %>
+    <table class="table mt-5 mb-5">
+      <%= render @badges %>
+    </table>
+  <% else %>
+    <h1>You have no badges</h1>
+  <% end %>
+</div>
