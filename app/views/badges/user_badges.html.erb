@@ -1,19 +1,19 @@
 <div class="container">
-  <% if @badges.any? %>
+  <% if @user_badges.any? %>
     <table class="table mt-5">
       <thead class="table-dark text-center">
         <tr>
-          <td colspan="2">All badges</td>
+          <td colspan="2">My badges</td>
         </tr>
       </thead>
 
       <tbody>
-        <%= render @badges %>
+        <%= render @user_badges %>
       </tbody>
     </table>
 
     <div class="text-center">
-      <%= link_to "Show my badges", user_badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
+      <%= link_to "Show all badges", badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
     </div>
   <% else %>
     <h1 class="text-center align-middle mt-5">You have no badges yet</h1>

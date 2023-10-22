@@ -1,20 +1,53 @@
+# Users
 users = User.create(
   [
+    { first_name: "User",
+      last_name: "Regular",
+      email: "user@gmail.com",
+      password: "qweqwe",
+      password_confirmation: "qweqwe" },
     { type: "Admin",
       first_name: "Bulat",
       last_name: "Khairutdinov",
       email: "god@admin.com",
-      password: "qweasd",
-      password_confirmation: "qweasd",
-    },
-    { first_name: "Regular",
-      last_name: "User",
-      email: "user@gmail.com",
       password: "qweqwe",
       password_confirmation: "qweqwe" },
   ]
 )
 
+# Badges
+Badge.create(name: "First Test",
+             image_name: "first_test.png",
+             description: "This badge is given to you once you pass your first test")
+Badge.create(name: "Flawless Test",
+             image_name: "flawless_test.png",
+             description: "You answered all the test questions correctly")
+Badge.create(name: "Epic Fail",
+             image_name: "epic_fail.png",
+             description: "You answered all the test questions incorrectly")
+Badge.create(name: "Amazing First Attempt",
+             image_name: "amazing_first_attempt.png",
+             description: "You have successfully passed the test on the first attempt")
+Badge.create(name: "Programming Guru",
+             image_name: "programming_guru.png",
+             description: "You have successfully passed all the tests from the 'Programming' category")
+Badge.create(name: "Music Mixing Guru",
+             image_name: "music_mixing_guru.png",
+             description: "You have successfully passed all the tests from the 'Music Mixing' category")
+Badge.create(name: "Gaming Guru",
+             image_name: "gaming_guru.png",
+             description: "You have successfully passed all the tests from the 'Gaming' category")
+Badge.create(name: "Easy Peasy",
+             image_name: "easy_peasy.png",
+             description: "You have successfully passed all the tests with level 'Easy'")
+Badge.create(name: "Medium Rare",
+             image_name: "medium_rare.png",
+             description: "You have successfully passed all the tests with level 'Medium'")
+Badge.create(name: "Die Hard",
+             image_name: "die_hard.png",
+             description: "You have successfully passed all the tests with level 'Hard'")
+
+# Categories
 categories = Category.create(
   [
     { title: "Programming" },
@@ -23,6 +56,7 @@ categories = Category.create(
   ]
 )
 
+# Category tests
 tests = Test.create(
   [
     {
@@ -30,40 +64,47 @@ tests = Test.create(
       level: 1,
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
     {
       title: "Ruby Intermediate",
       level: 2,
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
     {
       title: "Mixing Basics",
       level: 1,
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
     {
       title: "Mixing Advanced",
       level: 3,
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
     {
       title: "Deus Ex",
       level: 3,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
     {
       title: "Amnesia",
       level: 2,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
+      active: true,
     },
   ]
 )
 
+# Test questions
 questions = Question.create(
   [
     {
@@ -144,6 +185,7 @@ questions = Question.create(
   ]
 )
 
+# Question answers
 question_ids_one = [1, 3, 4, 6, 7, 10, 12, 13, 15, 16, 17]
 question_ids_two = [2, 5, 8, 9, 11, 14, 18]
 

@@ -35,5 +35,9 @@ Rails.application.routes.draw do
 
   resource :gist, only: :create
   resources :feedbacks, only: %i[new create]
-  resources :badges, only: :index
+  resources :badges, only: :index do
+    collection do
+      get 'user_badges', to: 'badges#user_badges', as: 'user'
+    end
+  end
 end
