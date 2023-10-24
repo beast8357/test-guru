@@ -12,10 +12,9 @@
       </tbody>
     </table>
 
-    <div class="text-center">
-      <%= link_to "Show all badges", badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
-    </div>
+    <%= render 'show_all_badges' %>
   <% else %>
     <h1 class="text-center align-middle mt-5">You have no badges yet</h1>
+    <%= render 'show_all_badges' %>
   <% end %>
 </div>
