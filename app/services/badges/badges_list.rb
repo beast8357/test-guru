@@ -4,16 +4,14 @@ module Badges
   class BadgesList
     class << self
       def call
+        badge_params = Badges::Constants::BadgeParams::BADGE_PARAMS
         list = []
-        BADGE_PARAMS.each do |criterion, params|
+        badge_params.each do |criterion, params|
           list << Badge.find_by_name(params.fetch(:name))
         end
+
         return list
       end
     end
-
-    private
-
-    BADGE_PARAMS = Badges::Constants::BadgeParams::BADGE_PARAMS
   end
 end
