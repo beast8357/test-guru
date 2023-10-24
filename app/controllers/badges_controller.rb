@@ -1,6 +1,6 @@
 class BadgesController < ApplicationController
   def index
-    @badges = Badges::Constants::BadgesList.call
+    @badges = Badges::BadgesList.call
   end
 
   def user_badges
