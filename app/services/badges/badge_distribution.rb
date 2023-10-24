@@ -15,8 +15,7 @@ module Badges
       params = Badges::Constants::BadgeParams::BADGE_PARAMS
       criteria.keys.each do |criterion|
         if criteria.fetch(criterion).call(self)
-          badge = Badge.new(params.fetch(criterion))
-          user.badges << badge if badge.save!
+          user.badges << Badge.find_by_name(params.fetch(criterion).fetch(:name))
         end
       end
     end
