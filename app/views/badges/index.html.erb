@@ -3,7 +3,7 @@
     <table class="table mt-5">
       <thead class="table-dark text-center">
         <tr>
-          <td colspan="2">All badges</td>
+          <td colspan="2"><%= t('.all_badges') %></td>
         </tr>
       </thead>
 
@@ -13,7 +13,7 @@
     </table>
 
     <div class="text-center">
-      <%= link_to "Show my badges", user_badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
+      <%= link_to t('.my_badges'), user_badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
     </div>
   <% end %>
 </div>

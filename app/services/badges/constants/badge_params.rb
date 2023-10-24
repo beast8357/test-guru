@@ -19,7 +19,7 @@ module Badges
         user_passed_the_test_flawlessly_on_the_first_attempt:
           { name: "Amazing First Attempt",
             image_name: "amazing_first_attempt.png",
-            description: "You successfully passed the test on the first attempt" },
+            description: "You passed the test flawlessly on the first attempt" },
         user_successfully_passed_all_tests_on_programming:
           { name: "Programming Guru",
             image_name: "programming_guru.png",

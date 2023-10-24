@@ -3,7 +3,7 @@
     <table class="table mt-5">
       <thead class="table-dark text-center">
         <tr>
-          <td colspan="2">My badges</td>
+          <td colspan="2"><%= t('.my_badges') %></td>
         </tr>
       </thead>
 
@@ -14,7 +14,7 @@
 
     <%= render 'show_all_badges' %>
   <% else %>
-    <h1 class="text-center align-middle mt-5">You have no badges yet</h1>
+    <h1 class="text-center align-middle mt-5"><%= t('.no_badges') %></h1>
     <%= render 'show_all_badges' %>
   <% end %>
 </div>

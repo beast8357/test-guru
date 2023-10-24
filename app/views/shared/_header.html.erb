@@ -12,13 +12,13 @@
           <% end %>
         </span>
         <% if current_user.admin?%>
-        <button type="button" class="btn btn-dark">
-          <%= link_to t('.admin_panel'), admin_tests_path,
-                                         class: "nav-link active" %>
-        </button>
+          <button type="button" class="btn btn-dark">
+            <%= link_to t('.admin_panel'), admin_tests_path,
+                                           class: "nav-link active" %>
+          </button>
         <% end %>
 
-        <%= link_to "My badges", user_badges_path,
+        <%= link_to t('.my_badges'), user_badges_path,
                                  class: "btn btn-dark" %>
 
         <%= render 'shared/select_language' %>
