@@ -1,5 +1,4 @@
 class Answer < ApplicationRecord
-
   MAX_ANSWERS_COUNT = 4
 
   belongs_to :question
@@ -16,5 +15,4 @@ class Answer < ApplicationRecord
     errors.add(:question, "cannot contain more than 4 answers") if
     question.answers.count >= MAX_ANSWERS_COUNT
   end
-  
 end

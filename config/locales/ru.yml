@@ -51,6 +51,7 @@ ru:
       sign_up: "Регистрация"
       welcome: "Добро пожаловать, %{user_name}"
       admin_panel: "Панель Администратора"
+      my_badges: "Мои бейджи"
     select_language:
       select: "Выбрать язык"
       en: "Английский"
@@ -113,6 +114,15 @@ ru:
     form:
       header: "Форма обратной связи"
       back: "Назад"
+  badges:
+    user_badges:
+      no_badges: "У вас пока нет бейджей"
+      my_badges: "Мои бейджи"
+    show_all_badges:
+      all_badges: "Все бейджи"
+    index:
+      all_badges: "Все бейджи"
+      my_badges: "Мои бейджи"
 
   admin:
     nav:

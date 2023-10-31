@@ -1,5 +1,4 @@
 class Test < ApplicationRecord
-
   belongs_to :category
   belongs_to :creator, class_name: "User", foreign_key: "creator_id"
   has_many :questions, dependent: :destroy
@@ -16,5 +15,4 @@ class Test < ApplicationRecord
   scope :medium, -> { by_level(2) }
   scope :hard, -> { by_level(3) }
   scope :ready, -> { where("questions_count > ?", 0).where(active: true) }
-  
 end

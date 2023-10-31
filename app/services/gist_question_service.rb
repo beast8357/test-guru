@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class GistQuestionService
-
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -35,5 +34,4 @@ class GistQuestionService
     content += @question.answers.pluck(:body)
     content.join("\n")
   end
-
 end
