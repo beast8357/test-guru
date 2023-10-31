@@ -1,4 +1,5 @@
 class Admin::TestsController < Admin::BaseController
+
   before_action :set_tests, only: %i[index update_inline]
   before_action :set_test, only: %i[start show edit update destroy update_inline]
   before_action :test_params, only: %i[create update update_inline]
@@ -72,4 +73,5 @@ class Admin::TestsController < Admin::BaseController
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :active)
   end
+
 end

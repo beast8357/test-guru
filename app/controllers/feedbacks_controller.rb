@@ -1,4 +1,5 @@
 class FeedbacksController < ApplicationController
+
   def new
     @feedback = current_user.feedbacks.new
   end
@@ -20,4 +21,5 @@ class FeedbacksController < ApplicationController
   def feedback_params
     params.require(:feedback).permit(:title, :body)
   end
+
 end

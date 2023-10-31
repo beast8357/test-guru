@@ -1,25 +1,20 @@
-# Users
 users = User.create(
   [
-    { first_name: "User",
-      last_name: "Regular",
-      email: "user@gmail.com",
-      password: "qweqwe",
-      password_confirmation: "qweqwe" },
     { type: "Admin",
       first_name: "Bulat",
       last_name: "Khairutdinov",
       email: "god@admin.com",
+      password: "qweasd",
+      password_confirmation: "qweasd",
+    },
+    { first_name: "Regular",
+      last_name: "User",
+      email: "user@gmail.com",
       password: "qweqwe",
       password_confirmation: "qweqwe" },
   ]
 )
 
-# Badges
-badge_params = Badges::Constants::BadgeParams::BADGE_PARAMS
-badge_params.keys.each { |criterion| Badge.create(badge_params.fetch(criterion)) }
-
-# Categories
 categories = Category.create(
   [
     { title: "Programming" },
@@ -28,7 +23,6 @@ categories = Category.create(
   ]
 )
 
-# Category tests
 tests = Test.create(
   [
     {
@@ -36,47 +30,40 @@ tests = Test.create(
       level: 1,
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
     {
       title: "Ruby Intermediate",
       level: 2,
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
     {
       title: "Mixing Basics",
       level: 1,
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
     {
       title: "Mixing Advanced",
       level: 3,
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
     {
       title: "Deus Ex",
       level: 3,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
     {
       title: "Amnesia",
       level: 2,
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
-      active: true,
     },
   ]
 )
 
-# Test questions
 questions = Question.create(
   [
     {
@@ -157,7 +144,6 @@ questions = Question.create(
   ]
 )
 
-# Question answers
 question_ids_one = [1, 3, 4, 6, 7, 10, 12, 13, 15, 16, 17]
 question_ids_two = [2, 5, 8, 9, 11, 14, 18]
 

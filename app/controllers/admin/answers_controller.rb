@@ -1,4 +1,5 @@
 class Admin::AnswersController < Admin::BaseController
+
   helper_method :current_test, :current_question
 
   before_action :set_answer, only: %i[show edit update destroy]
@@ -56,4 +57,5 @@ class Admin::AnswersController < Admin::BaseController
   def answer_params
     params.require(:answer).permit(:body, :correct)
   end
+
 end

@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   FLASH_TYPES = { notice: 'alert-success', alert: 'alert-danger' }.freeze
 
   def current_year
@@ -27,4 +28,5 @@ module ApplicationHelper
   def select_language(lang)
     url_for(lang: lang.to_sym)
   end
+
 end

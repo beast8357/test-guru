@@ -1,4 +1,5 @@
 class GistsController < ApplicationController
+
   before_action :set_test_passage, only: :create
 
   def create

@@ -1,4 +1,5 @@
 class Admin::QuestionsController < Admin::BaseController
+
   helper_method :current_test
 
   before_action :find_question, only: %i[show edit update destroy]
@@ -52,4 +53,5 @@ class Admin::QuestionsController < Admin::BaseController
   def question_params
     params.require(:question).permit(:body)
   end
+
 end

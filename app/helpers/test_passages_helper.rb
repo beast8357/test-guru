@@ -1,4 +1,5 @@
 module TestPassagesHelper
+
   def results_header(test_passage)
     if test_passage.successful?
       t('.success', test_title: test_passage.test.title)
@@ -24,4 +25,5 @@ module TestPassagesHelper
        </p>".html_safe
     end
   end
+
 end
