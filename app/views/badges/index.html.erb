@@ -13,7 +13,7 @@
     </table>
 
     <div class="text-center">
-      <%= link_to t('.my_badges'), user_badges_path, class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
+      <%= link_to t('.my_badges'), user_badges_path(current_user), class: "btn btn-light btn-outline-dark mt-2 mb-5" %>
     </div>
   <% end %>
 </div>
