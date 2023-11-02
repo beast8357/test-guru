@@ -114,15 +114,25 @@ ru:
     form:
       header: "Форма обратной связи"
       back: "Назад"
+
   badges:
-    user_badges:
-      no_badges: "У вас пока нет бейджей"
-      my_badges: "Мои бейджи"
-    show_all_badges:
-      all_badges: "Все бейджи"
     index:
-      all_badges: "Все бейджи"
       my_badges: "Мои бейджи"
+      all_badges: "Все бейджи"
+
+  users:
+    badges:
+      show_all_badges:
+        all_badges: "Все бейджи"
+      index:
+        no_badges: "У вас пока нет бейджей"
+        my_badges: "Мои бейджи"
+
+  services:
+    badges:
+      flash_messages:
+        new_badge: "Вы получили новый бейдж!"
+        new_badges: "Вы получили новые бейджи!"
 
   admin:
     nav:
