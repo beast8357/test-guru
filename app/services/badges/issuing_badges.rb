@@ -13,17 +13,16 @@ module Badges
 
     def call
       criteria = Badges::Constants::CriteriaCheck::CRITERIA_CHECK
-      params = Badges::Constants::BadgeParams::BADGE_PARAMS
-      collect_badges(criteria, params)
+      collect_badges(criteria)
       return badges
     end
 
     private
 
-    def collect_badges(criteria, params)
+    def collect_badges(criteria)
       criteria.keys.each do |criterion|
         if criteria.fetch(criterion).call(self)
-          name = params.fetch(criterion).fetch(:name)
+          name = Badges::BadgeName.call(criterion)
           badge = Badge.find_by_name(name)
           badges << badge
           user.badges << badge

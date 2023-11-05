@@ -3,8 +3,8 @@
 module Badges
   class UserBadgeCheck
     class << self
-      def suitable?(context, name)
-        !context.user.badges.find_by_name(name).nil?
+      def suitable?(user, badge_name)
+        user.badges.find_by_name(badge_name).nil?
       end
     end
   end
