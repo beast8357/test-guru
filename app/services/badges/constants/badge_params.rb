@@ -7,7 +7,7 @@ module Badges
         user_passed_their_first_test:
           { name: "First Test",
             image_name: "first_test.png",
-            description: "You passed your first test" },
+            description: "You completed your first test" },
         user_passed_the_test_flawlessly:
           { name: "Flawless Test",
             image_name: "flawless_test.png",

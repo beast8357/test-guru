@@ -17,22 +17,61 @@ module Badges
           Badges::CriteriaLogic::UserPassedTheTestFlawlesslyOnTheFirstAttemptLogic.suitable?(context, CRITERIA_CHECK)
         end,
         user_successfully_passed_all_tests_on_programming: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnCertainCategoryLogic.suitable?(context, "Programming")
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_on_programming)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          category_name = Category.find_by_id(1).title
+          category_id = Category.find_by_title(category_name).id
+          relevant_tests = Test.by_category(category_name).ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_on_music_mixing: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnCertainCategoryLogic.suitable?(context, "Music Mixing")
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_on_music_mixing)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          category_name = Category.find_by_id(2).title
+          category_id = Category.find_by_title(category_name).id
+          relevant_tests = Test.by_category(category_name).ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_on_gaming: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnCertainCategoryLogic.suitable?(context, "Gaming")
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_on_gaming)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          category_name = Category.find_by_id(3).title
+          category_id = Category.find_by_title(category_name).id
+          relevant_tests = Test.by_category(category_name).ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_easy: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnLevelEasyLogic.suitable?(context)
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_easy)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          level = 1
+          relevant_tests = Test.easy.ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_medium: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnLevelMediumLogic.suitable?(context)
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_medium)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          level = 2
+          relevant_tests = Test.medium.ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_hard: ->(context) do
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOnLevelHardLogic.suitable?(context)
+          badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_hard)
+          return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
+          level = 3
+          relevant_tests = Test.hard.ready
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
       }.freeze
     end

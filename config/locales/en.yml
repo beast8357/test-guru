@@ -114,15 +114,25 @@ en:
     form:
       header: "Feedback form"
       back: "Back"
+
   badges:
-    user_badges:
-      no_badges: "You have no badges yet"
-      my_badges: "My badges"
-    show_all_badges:
-      all_badges: "All badges"
     index:
-      all_badges: "All badges"
       my_badges: "My badges"
+      all_badges: "All badges"
+
+  users:
+    badges:
+      show_all_badges:
+        all_badges: "All badges"
+      index:
+        no_badges: "You have no badges yet"
+        my_badges: "My badges"
+
+  services:
+    badges:
+      flash_messages:
+        new_badge: "You've received a new badge!"
+        new_badges: "You've received new badges!"
 
   admin:
     nav:

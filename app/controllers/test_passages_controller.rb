@@ -17,7 +17,7 @@ class TestPassagesController < ApplicationController
 
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now
-      Badges::BadgeDistribution.new(@test_passage).call
+      operate_badges(@test_passage)
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
@@ -28,5 +28,16 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def operate_badges(test_passage)
+    badges = Badges::IssuingBadges.new(test_passage).call
+    flash[:notice] = new_badges_message(badges)
+  end
+
+  def new_badges_message(badges)
+    unless badges.empty?
+      Badges::FlashMessages::NewBadgesMessage.call(badges.count)
+    end
   end
 end
