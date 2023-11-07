@@ -22,7 +22,9 @@ module Badges
           category_name = Category.find_by_id(1).title
           category_id = Category.find_by_title(category_name).id
           relevant_tests = Test.by_category(category_name).ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.suitable?(context.user.test_passages, category_id, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_on_music_mixing: ->(context) do
           badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_on_music_mixing)
@@ -30,7 +32,9 @@ module Badges
           category_name = Category.find_by_id(2).title
           category_id = Category.find_by_title(category_name).id
           relevant_tests = Test.by_category(category_name).ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.suitable?(context.user.test_passages, category_id, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_on_gaming: ->(context) do
           badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_on_gaming)
@@ -38,28 +42,36 @@ module Badges
           category_name = Category.find_by_id(3).title
           category_id = Category.find_by_title(category_name).id
           relevant_tests = Test.by_category(category_name).ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.suitable?(context.user.test_passages, category_id, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainCategoryLogic.new(
+            context.user.test_passages, category_id, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_easy: ->(context) do
           badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_easy)
           return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
           level = 1
           relevant_tests = Test.easy.ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.suitable?(context.user.test_passages, level, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_medium: ->(context) do
           badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_medium)
           return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
           level = 2
           relevant_tests = Test.medium.ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.suitable?(context.user.test_passages, level, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
         user_successfully_passed_all_tests_lvl_hard: ->(context) do
           badge_name = Badges::BadgeName.call(:user_successfully_passed_all_tests_lvl_hard)
           return unless Badges::UserBadgeCheck.suitable?(context.user, badge_name)
           level = 3
           relevant_tests = Test.hard.ready
-          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.suitable?(context.user.test_passages, level, relevant_tests)
+          Badges::CriteriaLogic::UserSuccessfullyPassedAllTestsOfCertainLevelLogic.new(
+            context.user.test_passages, level, relevant_tests
+          ).suitable?
         end,
       }.freeze
     end
