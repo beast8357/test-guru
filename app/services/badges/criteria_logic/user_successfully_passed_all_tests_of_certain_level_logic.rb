@@ -16,7 +16,7 @@ module Badges
           test = relevant_tests.find_by_id(t_p.test_id)
           if test && test.level == level && t_p.successful? && !box.include?(t_p)
             test_ids << t_p.test_id
-            box << t_p if test_ids.count(t_p.test_id) == 1
+            box << t_p if test_ids.count(t_p.test_id) == ONE
           end
         end
 
@@ -26,6 +26,8 @@ module Badges
       private
 
       attr_reader :box, :test_ids, :user_test_passages, :level, :relevant_tests
+
+      ONE = 1
     end
   end
 end
