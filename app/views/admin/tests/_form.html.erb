@@ -22,6 +22,11 @@
         </p>
 
         <p>
+          <%= t('.time_limit') %><br>
+          <%= form.number_field :time_limit %>
+        </p>
+
+        <p>
           <%= form.label :active %>
           <%= form.check_box :active %>
         </p>
@@ -29,7 +34,7 @@
         <p><%= form.submit class: "btn btn-primary" %></p>
 
         <p>
-          <%= link_to t('.back'), admin_tests_path(@test), class: "btn btn-primary" %>  
+          <%= link_to t('.back'), admin_tests_path(@test), class: "btn btn-primary" %>
         </p>
       <% end %>
     </div>

@@ -172,6 +172,7 @@ en:
         edit: "Test editing"
         create: "Test creation"
         back: "Back"
+        time_limit: "Time to pass in minutes (optional)"
       form_inline:
         submit: "OK"
 
