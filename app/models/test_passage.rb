@@ -29,6 +29,16 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def time_is_over?
+    return false if test.time_limit.zero?
+
+    Time.now > self.deadline
+  end
+
+  def time_left
+    deadline - Time.now
+  end
+
   private
 
   def before_validation_set_first_question
@@ -53,5 +63,9 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def deadline
+    created_at + test.time_limit.minutes
   end
 end
