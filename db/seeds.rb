@@ -37,6 +37,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
     {
       title: "Ruby Intermediate",
@@ -44,6 +45,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Programming").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
     {
       title: "Mixing Basics",
@@ -51,6 +53,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
     {
       title: "Mixing Advanced",
@@ -58,6 +61,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Music Mixing").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
     {
       title: "Deus Ex",
@@ -65,6 +69,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
     {
       title: "Amnesia",
@@ -72,6 +77,7 @@ tests = Test.create(
       category_id: Category.find_by_title("Gaming").id,
       creator_id: User.find_by_email("god@admin.com").id,
       active: true,
+      time_limit: 5,
     },
   ]
 )
