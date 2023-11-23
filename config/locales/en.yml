@@ -153,11 +153,13 @@ en:
         actions: "Actions"
         new_test: "New test"
         show_gists: " Show gists"
+        time_limit: "Time to pass (min)"
       test:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
         cancel: "Cancel"
+        no_time_limit: "No time limit"
       show:
         category: "Category: "
         title: "Title: "
@@ -168,6 +170,7 @@ en:
         actions: "Actions"
         new_question: "New question"
         back: "Back"
+        time_limit: "Time to pass (min): "
       form:
         edit: "Test editing"
         create: "Test creation"
