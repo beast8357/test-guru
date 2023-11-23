@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_29_072612) do
+ActiveRecord::Schema.define(version: 2023_11_21_130206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 2023_09_29_072612) do
     t.integer "creator_id"
     t.boolean "active", default: false, null: false
     t.integer "questions_count", default: 0
+    t.integer "time_limit", default: 0
     t.index ["active"], name: "index_tests_on_active"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["creator_id"], name: "index_tests_on_creator_id"

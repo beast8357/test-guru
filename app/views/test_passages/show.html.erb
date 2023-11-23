@@ -1,13 +1,13 @@
 <div class="container-fluid mt-4">
-  <h1 class="text-center">
-    <%= t('.passing', test_title: @test_passage.test.title) %>
-  </h1>
+  <h1 class="text-center"><%= t('.passing', test_title: @test_passage.test.title) %></h1>
 
   <h5 class="text-center mt-2">
     <%= t('.questions_count', count: @test_passage.test.questions.count) %>
   </h5>
 
   <table class="table table-bordered border-dark mt-3">
+    <div class="timer" id="timer" data-time-left="<%= @test_passage.time_left %>"></div>
+
     <tr>
       <th>
         <h5 class="text-center">

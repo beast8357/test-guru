@@ -12,4 +12,8 @@ module TestsHelper
       t('.edit')
     end
   end
+
+  def timer(test)
+    test.time_limit.zero? ? t('admin.tests.test.no_time_limit') : test.time_limit.to_s
+  end
 end

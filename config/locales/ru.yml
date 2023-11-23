@@ -153,11 +153,13 @@ ru:
         actions: "Действия"
         new_test: "Создать тест"
         show_gists: " Просмотр gist'ов"
+        time_limit: "Время на прохождение (мин)"
       test:
         show: "Просмотр"
         edit: "Редактировать"
         delete: "Удалить"
         cancel: "Отмена"
+        no_time_limit: "Нет ограничения"
       show:
         category: "Категория: "
         title: "Название: "
@@ -168,10 +170,12 @@ ru:
         actions: "Действия"
         new_question: "Добавить вопрос"
         back: "Назад"
+        time_limit: "Время на прохождение (мин): "
       form:
         edit: "Редактирование теста"
         create: "Создание теста"
         back: "Назад"
+        time_limit: "Время на прохождение в минутах (опционально)"
       form_inline:
         submit: "ОК"
 
